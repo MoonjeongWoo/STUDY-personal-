@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+
+
+</head>
+
+<body>
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button id="send-answer">제출</button>
+
+    <script>
+        //유저가 답을 맞추먄 alert 성공
+        // 유저가 답을 3번이상 못 맞추면 멍청아 alert
+
+        var count = 0;
+
+        document.getElementById('send-answer').addEventListener('click', function() {
+            count++;
+            var input = document.getElementById('answer').value;
+
+            if (input != 1335 || null) {
+                alert('다시푸셈')
+
+                if (count >= 3) {
+                    alert('멍청아');
+                }
+
+            } else if (input == 1335) {
+                alert('성공');
+                return 0;
+            }
+        })
+    </script>
+
+</body></html>
