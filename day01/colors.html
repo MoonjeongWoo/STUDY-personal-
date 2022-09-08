@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colors</title>
+</head>
+<style>
+    /* # : id 값       . : class 값 */
+    /*
+    여기가 css작성하는 공간입니다.
+    orange의 id 값을 가져와볼까요?
+    */
+    #orange{ /*1번*/
+        background-color: orange; /*배경색상을 의미합니다.*/
+    }
+
+    /*
+    이런식으로 작성하면 됩니다! 네모난 색상을 누르면 바로바로 바꿀 수도 있답니다.
+    */
+    .mycolor{ /*2번*/
+        color: hsl(334, 87%, 56%); /*글씨색상을 의미합니다.*/
+    }
+
+    #bordercolor{ /*3번*/
+        border: 1px solid red; /*1px : 테두리 굵기 soild : 실선 red : 색상*/
+    }
+</style>
+
+<body>
+    <div style="text-align: center;">
+        <b style="font-size: 40px;">color</b>
+        <br><br> 
+    </div>
+    <b>html 색상은 RGB, HEX, HSL, RGBA 또는 HSLA 값으로 지정됩니다.</b>
+    <h1 style="background-color: tomato;">토마토</h1>
+    <p>이런식으로 태그안에 style를 적어서 css를 사용할 수 있죠!</p>
+    <p>또한 고유의 색상이름이 있을 경우 색상을 tomato나 orange 처럼 입력해도 됩니다!!</p>
+    <p>태그안에 넣는게 싫다!! 하면?! &lt;head&gt; 와 &lt;body&gt; 사이에 css를 사용할 수 있어요!</p>
+    
+    <br>
+    <h2 id="orange">나는야 오렌지</h2>
+    <!--head 와 body 사이의 style로 가볼까요? 1번-->
+    <p>토마토 처럼 배경색상이 생겼죠???</p>
+    <br>
+
+    <p>내가 원하는 색상을 표현하고 싶어! 라고 하면 아래의 링크를 눌러볼까요?</p>
+    <a href="https://html-color-codes.info/Korean/" target="_blank">html 색상표</a>
+    <!-- 이렇게 원하는 색상을 뽑을 수도 있습니다. -->
+
+    <h5>사용은 어떻게 하나요?</h5>
+    <p class="mycolor">나만의 색1</p>
+    <!-- style태그로 가볼게요! 2번 -->
+    <p style="color: rgb(59, 226, 40);">나만의 색2</p>
+    <p style="color: rgba(99, 40, 226, 0.378);">나만의 색3</p> <!--이런식으로 투명도를 설정할 수 있어요!-->
+
+    <hr>
+    <h3>직접 사용해 볼까요??</h3>
+    <p>오늘의 <span>주인공</span> 은 나</p> <!--주인공만 색상으로 바꿔보세요-->
+    
+    <!-- <p>주석풀고 여기다가 작성해보세요</p> -->
+    <hr>
+    <h4 id="meme" onclick="me()" style="cursor: pointer;">저를 클릭하면 테두리가 생겨요!</h4>
+    <p>이렇게 테두리도 색상을 만들어보겠습니다.</p>
+
+    <p>테두리는 border 속성을 이용하면 됩니다!</p>
+    <p id="bordercolor">테두리 색상 고고</p>
+    <!-- style태그로 가볼게요! 3번 -->
+
+    <p>soild : 실선 dotted : 짧은 점선 dashed : 긴 점선 double : 두줄처리 등 있습니당 </p>
+
+    <footer>
+        <a href="home.html">이곳을 눌러 홈으로 갑시다.</a>
+    </footer>
+</body>
+<script>
+    function me(){
+        document.getElementById("meme").style.border="1px solid violet";
+    }
+</script>
+</html>

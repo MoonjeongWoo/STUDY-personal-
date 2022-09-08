@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title> 웹기초 배우기 HTML 101 </title>
+	</head>
+	<body>
+        맨바닥에 이렇게 대책없이 텍스트를 적어도 되는데 이걸 이쁘장하게 포장하는 일을 'p태그' 라는 녀석이 합니다.
+
+        <p>이것은 P태그 입니다.</p>
+
+        <h1>이것은 h1입니다. head의 약자죠.</h1>
+        <h2>이것은 h2입니다. </h2>
+        <h3>이것은 h3입니다. </h3>
+        <h4>이것은 h4입니다. </h4>
+        <h5>이것은 h5입니다. </h5>
+        <h6>이것은 h6입니다. </h6>
+        <p>h태그는 기본적으로 위아래 문단간에 공백을 표시합니다.</p>
+        <p>P태그도 마찬가지지요.</p>
+        <hr>
+        <p>hr테그는 선을 하나 긋습니다. 구분선이죠.</p>
+        <hr>
+        <p>태그 안에는 태그를 넣을 수 있습니다. <span style="color:red">이 빨간색은 span태그이고, p태그 안에 있지요.</span></p>
+        <span>이것은 span 태그 입니다.</span>
+        <span>span태그를 붙이면 문단 간격을 띄지 않는 것을 볼 수 있습니다.</span>
+        <span>이것은 2번째 span</span>
+        <span>이것은 3번째 span</span>
+        <br>
+        <span>br로 띄웠습니다. 이것은 4번째 span</span>
+        <p>P태그는 공백을 자동적으로 띄우고 있다는 것을 다시 확인할 수 있습니다.</p>
+        <p title="이렇게 글이 보이는 것을 마우스오버라고 하죠. 이곳에 글을 적는 것이 title 속성입니다. " >title이라는 내부 속성이 있습니다. <span style="color:red">이곳</span>에 마우스커서를 가져다 대면 설명이 나옵니다.</p>
+        <span>빨간색은 span 태그 옆에 아까 배웠던 속성 이라는 녀석을 넣어서 만들었습니다.</span>
+        <p>style이라는 속성은 곧 CSS를 대표하는 속성입니다. 태그 안에다가 'style'을 주면 인라인 이라는 표현을 쓰지요.</p>
+        <p>css는 다음과 같습니다. style="property:value" </p>
+ 
+        <div class="imgs" style="border:1px solid red;display:inline-block;" width ="400px">
+            <img id="img" src="https://w.namu.la/s/a09cdb2fadaef8fad8180f013d52ceaa89ee9b023cc5ba7f78bcd2febc5ce20843e4646c2529ec88a86988f8f79398f4f082f9036da6331d1fbcf80e6090f4b2415245fd2f02f903530b20379338a663797dae1b61c2aa83e5f6f1fbf5460e24d11f3c9774780e53c2b5766321364667" 
+            alt="이것은 alt입니다. 이미지가 안보일때 나오는 텍스트죠."
+            width ="400px"
+            height ="600">    
+        </div>
+
+        <button id="btn">버튼을 눌러봅시다.</button>
+
+        <footer>
+            <a href="home.html">이곳을 눌러 홈으로 갑시다.</a>
+        </footer>
+    </body>
+    <script>
+        document.getElementById("btn").addEventListener('click',()=>{
+            document.querySelector('#img').src = "";
+            document.getElementsByClassName('imgs').style = 'backgroundcolor:red;'
+        })
+        
+
+    </script>
+</html>

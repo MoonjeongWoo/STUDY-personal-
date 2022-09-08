@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JS101</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cheatsheet.css" rel="stylesheet" />
+        <link rel="stylesheet" href="comapare.css">
+<style>
+            .list-group-item{
+              text-align: center;
+            }
+            header.masthead {
+                padding-top: 10.5rem;
+                padding-bottom: 1rem;
+                text-align: center;
+                color: #fff;
+                background-image: url("https://cdn.clien.net/web/api/file/F01/11281882/89d0f42a11bce8.jpg?w=780&h=30000");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+                width: 293px;
+            }
+            @media (min-width: 992px){
+                #mainNav {
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    border: none;
+                    background-color: currentcolor;
+                    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+                }
+            }
+            .section-heading{
+                margin-top: 300px;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">JavaScript Introduce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">홈으로</a></li>
+                        <li class="nav-item"><a href="index.html" class="nav-link">비교연산자</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <div class="bd-cheatsheet container-fluid bg-body">
+            <section id="content">
+                <div class="introduce">
+                    <h3>비교(compare)</h3>
+                    <br>
+                    <hr>
+                    <p>안녕하세요 문정우 입니다.</p>
+                    <p>오늘 배울거는 <strong style="color: red;"> 비교연산자 </strong>입니다. 
+                        <br>
+                        <strong style="color: red;"> 비교연산자 </strong>는 상당히 수학적인 논리가 필요하기 때문에
+                        <br>
+                        머리가 조금 아플수도 있습니다.
+                        <br>
+                        최대한 쉽게 풀어서 설명을 할려고 최선을 다할테니 
+                        <br>
+                        수강생 분들도 열심히 들어주세요!!
+                    </p>
+                </div>
+                <hr>
+                <div class="compare1">
+                    <h3>들어가기에 앞서...</h3>
+                    <br>
+                    <p>
+                        자 혹시 다들 부등호 아시나요?
+                        <br>
+                        부등호라고 하면 어? 뭐였징..? 이러고
+                        <br>
+                        금붕어가 되시는 분이 계십니다.
+                        <br>
+                        부등호는요, < , > , = 등 입니다.
+                        <br>
+                        왜 이모티콘 쓸때 >_< 이런거 쓰시지 않나요?
+                        <br>
+                        아무래도 저만 쓰는 것 같습니다. 
+                        <br>
+                        아무튼 우리는 초등학교때 부터, 우리는 부등호를 
+                        <br>
+                        배우면서 자라왔습니다.
+                        <br>
+                        남자분들은 애기 일때 아버지랑 같이 목욕탕 가서 
+                        <br>
+                        아빠꺼는 왜 맘모스야? 하고 물어 본적도 있고,
+                        <br>
+                        여성분들은 여성분들은 어떤 여자분이 지나가면
+                        <br>
+                        먼저 가방, 구두, 옷 ,얼굴 부터 스캔 하지 않습니까?
+                        <br>
+                        나보다 못난 곳이 있나 찾아 보려구요
+                        <br>
+                        바로 그러한 점이 비교 입니다.
+                        <br>
+                        우리는 이러한 비교를 등호로써 나타낼수 있습니다.
+                        <br>
+                        바로 꺽새와 등호로요.
+                        <br>
+                        꺽새는 (<) 로 나타내구요, 등호는 equal (=) 로 나타냅니다.
+                    </p>
+                </div>
+                <br>
+                <hr>
+                <div class="compare2">
+                    <h3>슬슬...들어가면서</h3>
+                    <br>
+                    <p>
+                        자 우리는 등호에 대해서 아주 살짝 배웠습니다.
+                        <br>
+                        그렇다면, 뭐가 크고 작은 거는 나타낼수 있겠죠?
+                        <br>
+                        그러면 1보다 2가 더 크다를 나타내보죠
+                        <br>
+                        보통은 1 < 2 이렇게 나타냅니다.
+                        <br>
+                        큰 숫자가 왼쪽에 오던, 오른쪽 오던 상관 없습니다.
+                        <br>
+                        글면, 이거를 컴퓨터로 나타내면 어떻게 될까요?
+                        <br>
+                        아마 똑같지 않을까요?
+                        <br>
+                        그러면 한번 확인을 해봅시다
+                        <br>
+                        console.log()를 치고 괄호 안에다가 1 < 2 를 해봅시다
+                        <br>
+                        해보셨나요? 저는 밑에 true라고 뜨는데, 이게 과연 뭘까요?
+                        <br>
+                        컴퓨터는 지능이 0이지만, 참 거짓은 구분합니다.
+                        <br>
+                        그래서 우리가 거짓말 치는지 안치는지는 알 수 있어요
+                        <br>
+                        그렇다면 반대로 1이 2보다 크다 라고 콘솔창에 적어보죠
+                        <br>
+                        console.log()를 치고 괄호 안에다가 1 > 2 를 쳐볼까요?
+                        <br>
+                        쳐보면, false 가 나오죠??
+                        <br>
+                        이렇게 컴퓨터는 값이 맞는지 안맞는지 구분을 해줍니다.
+                        <br>
+                        얘네는 모르겠습니다 그런게 없어요.
+                        <br>
+                        자 그러면 좀 더 심화 학습을 해보도록 하죠
+                    </p>
+                </div>
+                <br>
+                <hr>
+                <div class="compare3">
+                    <h3>비교 연산자 (compare)</h3>
+                    <br>
+                    <p>
+                        자 우리는 그러면 true, false 가 나오는 것 까지 확인을 했습니다.
+                        <br>
+                        그렇다면, 좀 더 세분화를 해서 
+                        <br>
+                        이상, 이하, 초과, 미만, 동등을 배워보도록 합시다
+                        <br>
+                        먼저 이상은 ≥ 이렇게 적지 않습니까? 
+                        <br>
+                        우리가 정한 숫자를 포함해서 그 위에 혹은, 더한것, 정도가 심한것
+                        <br>
+                        이게 이상이라고 합니다.
+                        <br>
+                        근데 컴퓨터에서는 ≥ 이거를 안씁니다. 
+                        <br>
+                        이거 쓸려면은 ㄷ 누르고 한자 키 눌러야 바뀝니다
+                        <br>
+                        언제 그렇게 바꿀거에요ㅋㅋㅋ 롤 돌려야 하는데,
+                        <br>
+                        그래서 컴퓨터는 >= 요런 기호를 씁니다.
+                        <br>
+                        문자가 난해하다고요? 걱정마세요! 
+                        <br>
+                        인간은 적응의 동물이라서 금방 적응합니다.
+                        <br>
+                        자 그렇다면 우리는 저번시간에 변수를 배웠으니깐,
+                        <br>
+                        자바스크립트를 사용 해 봅시다
+                        <br>
+                        먼저 변수를 지정해 주죠
+                        <br>
+                       <strong style="color: red;">나는 number라는 변수를 만들어 주고 거기다가 5를 집어 넣을거야</strong>
+                        <br>
+                        를 어떻게 만들죠?
+                        <br>
+                        var number = 5 이렇게 만들겠죠?
+                        <br>
+                        var 말고 let 도 괜찮습니다.
+                        <br>
+                        아무튼 이렇게 만들었으면, 식을 한번 만들어 봅시다.
+                    </p>
+                    <p>
+                        아 그리고 세미콜론도 붙이는거 까먹지 마세요! 
+                        <br>
+                        땀 표시 말하는 겁니다 => ;  이거요
+                        <br>
+                        그러면 일단 number라는 그릇에 5가 담겨 있네요
+                        <br>
+                        이거를 우리는 고급화된 언어로
+                        <br>
+                        number라는 변수에 5가 저장 되었다, 5가 할당 되었다,라고 합니다.
+                        <br>
+                        자 그렇다면 한번 확인해 보죠!
+                        <br>
+                        우리는 항상 결과를 확인하기 위해서 콘솔창을 열어놉시다.
+                        <br>
+                        자 그럼 콘솔창에 number라고 칠게요, 그럼 5가 나오죠??
+                        <br>
+                        그렇다면! 부등호가 맞는지 안맞는지 확인 해야하니깐 console.log(number > 3)을 쳐보도록 하죠
+                        <br>
+                        치고 엔터까지 누르면? 뭐가 나오나요? true가 나오죠??
+                        <br>
+                        그렇다면 3 말고 5로 해볼까요? 제 생각에는 아마 true가 나오지 않을까 싶습니다.
+                        <br>
+                        네  역시나 true 나오네요, 그렇다면 5이상은 false가 나오겠죠? 
+                        <br>
+                        그러면 이하는 어떻게 등호를 나타낼까요? <= 이렇게 하겠죠?
+                        <br>
+                        궁금 하다면 직접 해보시는게 좋다 생각합니다!
+                        <br>
+                        그럼 이제 등호를 배울 차례인것 같습니다
+                        <br>
+                    </p>
+                    <p>
+                        <h5>등호</h5>
+                        <br>
+                        요놈아는 좀 중요합니다
+                        <br>
+                        충청도 사투리로 기여! 아니여! 를 말할수 있죠
+                        <br>
+                        정식버전으로는 같다 다르다 라고 할수 있습니다
+                        <br>
+                        그렇다면! 이 등호는 어떻게 표시를 할까요?
+                        <br>
+                        우리가 실제로 등호를 사용할때는 이 등호 (=)만 사용합니다.
+                        <br>
+                        그리고 같을때는 (=), 다를때는 (=)여기에 짝대기 하나 긋죠,사선으로
+                        <br>
+                        근데 컴퓨터는 좀 다릅니다.
+                        <br>
+                        얘는 같다 라는 표시를 할때는 == -> 이것처럼 2개로 표시합니다.
+                        <br>
+                        왜 2개를 써요? 하고 묻는다면, 이미 답은 변수 선언 할때 나와 있습니다.
+                        <br>
+                        = 이거 하나만 쓸때에는 값을 지정 한다는 의미 입니다.
+                        <br>
+                        방금 우리가 number에다가 5라는 숫자를 할당(저장)을 해줬는데
+                        <br>
+                        그때 = 이 등호 표시를 쓰지 않았습니까? 그래서 우리는  헷갈리지 않게 이 등호 == 2개를 
+                        <br>
+                        쓰기로 정한겁니다! 일정의 약속이죠!
+                        <br>
+                        근데 이거는 이미 컴퓨터가 지정을 해놨기 때문에 바꾸지도 못합니다. 그냥 외우세요
+                        <br>
+                        그렇다면 이제 좀 중요한 틀리다! 를 배울겁니다
+                        <br>
+                        틀리다의 표시는 느낌표 등호 입니다.(!=) 이표시입니다.
+                        <br>
+                        쉽게 생각해서 ≠ 요 표시에서 사선이 느낌표로 바뀌었다 라고 생각하시면 
+                        <br>
+                        될것 같습니다!
+                        <br>
+                        자 그런 다음에, 등호가 이 2개만 쓰는게 다냐? 하고 물어 보신다면 
+                        <br>
+                        답은 3개 까지 쓸수 있습니다
+                        <br>
+                        그렇다면 요 ===개는 뭘 뜻하는 바일까요?
+                        <br>
+                        바로 좀 더 심화된 같냐 틀리냐 이 뜻 입니다.
+                        <br>
+                        요 === 등호를 3개를 써주면, 타입 까지 비교를 해줍니다 컴퓨터가요
+                        <br>
+                        그래서 이게 문자냐 숫자냐! 이런것도 비교가 가능합니다!
+                        <br>
+                        그렇다면? 좀 더 심화되게 이게 값이 다르냐 같냐는 어떻게 합니까?
+                        <br>
+                        !== 이표시를 씁니다.
+                        <br>
+                        그러면 한번 시도를 해보도록 하죠! 
+                        <br>
+                        number가 5가 아니라는 식은 어떻게 쓸까요?
+                        <br>
+                        number != 5 이게 맞겠죠!? 그럼 콘솔창에다가 찍으면 뭐라고 나올까요?
+                        <br>
+                        한번 시도를 해보도록 합시다. console.log(number != 5)라고 쓰면..
+                        <br>
+                        false라고 나오네요? 우리는 number 라는 변수에다가 5를 저장 해줬으니깐
+                        <br>
+                        이걸 틀리다! 라고 하면 컴퓨터는 아니다 너가 방금 5라고 선언 했잖아 하고
+                        <br>
+                        false를 내뱉는 겁니다. 이정도면 이해가 가시나요??
+                        <br>
+                    </p>
+                </div>
+                <br>
+                <hr>
+                <div class="compare4">
+                    <h3>문자열과 숫자 비교하기(pre)</h3>
+                    <br>
+                    <p>
+                        이번 챕터는 문자열과 숫자를 비교하는겁니다.
+                        <br>
+                        자바스크립트는 문자와 숫자도 비교 할 수 있습니다.
+                        <br>
+                        어떻게 구분을 할까요? 숫자와 문자는 서로 다른데..?
+                        <br>
+                        컴퓨터는 일단 기계입니다. 우리가 말하는 언어 자체를 몰라요
+                        <br>
+                        그럼 컴퓨터가 쓰는 언어는 따로 있을까요? 
+                        <br>
+                        네 따로 있습니다. 바로 기계어라고 합니다. 기계어가 뭐냐고 물어본다면은..
+                        <br>
+                        우리가 중학교때 이진수 배웠죠? 컴퓨터는 걔네들을 언어로 사용합니다.
+                        <br>
+                        그럼 어떻게 사용 하냐고요? 2에 e승 e에 2승 이러지는 않구요..
+                        <br>
+                        1010101011101010000110010101010 이런식으로 1과 0을 적절히 섞어서 씁니다. 이런걸 기계어라고 해요
+                        <br>
+                        근데 우리가 쓰는 이런  한글이나 영어는 어떻게 알아듣나요?
+                        <br>
+                        얘네는 이런 한글이나 영어를 기계어로 바꿔주는 애를 씁니다.
+                        <br>
+                        그럼 한글이나 영어에서 바로 바꾸느냐?? 그건 또 아닙니다.
+                        <br>
+                        바로 어셈블리어 라는 언어를 통해서, 바꿔줍니다.
+                        <br>
+                        어셈블리어는 중간 매게체 라고 보시면 되요, 우리가 쓰는 이런 한글이나 영어를,
+                        <br>
+                        어셈블리어로 바꾼다음에, 그거를 다시 하위단계로 만들어서 기계어로 번역을 하는거죠
+                        <br>
+                        그래서 우리는 이런 기계언어를 저급언어, 우리가 쓰는 언어를 고급언어라고 칭합니다.
+                        <br>
+                        아무튼 서론이 길었네요. 그렇다면 왜 이런 개념이 중요하냐?
+                        <br>
+                        이런 기계어를 좀 더 편하게 다루기 위해 나온것이 아스키 코드입니다.
+                        <br>
+                        아스키코드가 무엇이냐면..?
+                        <br>
+                        <a href="https://stepbystep1.tistory.com/10">아스키코드 보러가기</a>
+                        <br>
+                        <img src="/css/img/ASCII.png" alt="">
+                        얘 입니다.
+                        <br>
+                        한눈에 봐도 정말 뭣같죠?
+                        <br>
+                        저기서 우리는 다 볼 필요가 없습니다.
+                        <br>
+                        정작 중요한것만 보면 되요! 중요한게 뭐야..? 하면 어김없이 나오는 영어이겠죠?
+                        <br>
+                        우리는 알파벳 A 부터 소문자 Z 까지만 기억하고 있으면 됩니다!
+                        <br>
+                        PS)여기서 10진 16진은 10진수 16진수를 말합니다.
+                        <br>
+                        10진은 0~9 까지 16진은 0~ 15까지에요)
+                        <br>
+                        아무튼 이 아스키 코드를 가지고!! 컴퓨터는 문자열을 계산을 합니다.
+                        <br>
+                        미친놈이죠 ㅋㅋㅋ 
+                        <br>
+                        근데 정작 중요한거는 자바스크립트는 아스키 코드 별로 안씁니다.
+                        <br>
+                        자바스크립트는 유니코드라는 애를 씁니다.
+                        <br>
+                        유니 코드란 무엇이냐??
+                        <br>
+                        유니코드(Unicode)는 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 인코딩 표준
+                        <br>
+                        라고 하네요
+                        <br>
+                        사진은 너무 혐오적이여서 안가져왔습니다
+                        ㅋㅋㅋ
+                        <br>
+                        그래도 보고 싶으시면 <a href="https://tyboss.tistory.com/entry/Javascript-%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C-Unicode-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0">링크</a>
+                        <br>
+                        를 첨부 했으니 가서 보시면 됩니다 ㅋㅋㅋ
+                        <br>
+                        이해가 안되겠으면 한줄 요약 해드리겠습니다!!
+                        <br>
+                       <strong style="color: red;"> 자바스크립트가 문자열을 비교할때는 알파벳 순서가 앞에 있을 수록 더 크기가 작으며, 문자열의 앞에서 뒤의 순서대로 비교를 합니다.</strong>
+                        <br>
+                        문자열이 길어도 같은 위치(Index)의 문자의 알파벳 순서가 작다면 문자열의 크기가 작다고 계산됩니다
+                        <br>
+                        그리고 문자열 길이가 짧아서 같은 Index에 문자가 없으면 더 작은 문자열로 계산됩니다
+                        <br>
+                        이것도 어려우신가요? 그러면 아스키 코드를 이용해 알파벳으로 숫자를 치환합니다! 그걸로 비교하는거죠!
+                        <br>
+                        네 좀 어려운 개념이였네요! 그럼 그 다음으로 넘어가도록 하죠!
+                        <br>
+                        직접 해보는게 더 중요합니다!
+                    </p>
+                    <h3>직접 해보기</h3>
+                    <p>
+                        말이 필요 없죠! 
+                        <br>
+                        직접 한번 해봅시다!
+                        <br>
+                        먼저 콘솔창을 키고 나서, 2 < 12 를 해봅시다
+                        <br>
+                        그럼 false가 나오죠?? 그럼 그다음은 
+                        <br>
+                        2 < '12'를 해봅시다
+                        <br>
+                        뭐가 나오나요? true 가 나오죠??
+                        <br>
+                        true가 나오는 이유는 아무래도 이 '' 작은 따옴표 표시 때문에
+                        <br>
+                        생기는 겁니다. 왜일까요? 
+                        <br>
+                        왜냐하면 이 작은 따옴표 때문에 이 12를 문자로 치환하기 때문입니다!
+                        <br>
+                        그럼 왜 숫자가 문자열 보다 클까요?
+                        <br>
+                        정답은 아스키코드에 있습니다!
+                        <br>
+                        사실 정확한 이유는 저도 잘 모릅니다. 
+                        <br>
+                        이제 조사를 해보면 같은 위치에 있는 문자열의 순서가 작다면!
+                        <br>
+                        크기가 작다고 컴퓨터가 판단 하기 때문이죠!!
+                        <br>
+                        그러면 한번 더 시도를 해봅시다! 
+                        <br>
+                        2 < "Hello" 라고 콘솔창에 쳐 봅시다.
+                        <br>
+                        뭐가 나오나요? 
+                        <br>
+                        false가 나오죠??
+                        <br>
+                        근데 아직도 잘 모르겠습니다! 하면 알파벳의 첫번째 순서인 A 부터 하기로 하죠
+                        <br>
+                        그러면 2 < "A" 를 해보입시더
+                        <br>
+                        2 < "A" 하면 false가 나오네요 그렇다는 의미는 컴퓨터 에서는 문자열 보다
+                        <br>
+                        숫자가 더 순위가 높다는 뜻 이겠죠?                        
+                        <br>
+                        네 그러면 잠시 쉬었다가 가시죠!
+                    </p>
+                </div>
+                <div class="compare5">
+                    <h4 style="color: red;">논리연산자</h4>
+                    <br>
+                    <p>
+                        자 마지막인 논리연산자입니다
+                        <br>
+                        논리 연산자는 약간의 공학적 지식이 필요한데요,
+                        <br>
+                        그딴거는 저희 관심없으니깐 제쳐 두고, 제일 중요하다 싶은거만 하죠
+                        <br>
+                        논리 연산자는 조건이 있습니다! 
+                        <br>
+                        그 조건이 뭐냐 하면~ 참이냐! 거짓이냐 이말이죠
+                        <br>
+                        그게 boolean 이고 참 거짓을 판가름 해주는 겁니다.
+                        <br>
+                        근데 이제 참 거짓을 가름해 주는데~ 논리를 살짝 곁들인 거죠
+                        <br>
+                        식은 굉장히 쉽습니다! 둘다 참일때 하나만 참일때, 둘다 아닐때!
+                        <br>
+                        이거를 영어로도 풀면 굉장히 쉽습니다!
+                        <br>
+                        and,or,not! 으로 되죠
+                        <br>
+                        말이 되지 않습니까? 
+                        <br>
+                        조건이 2개가 있는데 그 2개가 참이면 and,
+                        <br>
+                        조건이 2개가 있는데 그중 하나라도! 참이면 or
+                        <br>
+                        조건이 2개가 잇는데 둘다 틀리면 not!
+                        <br>
+                        이렇게 표시할수가 있겠습니다.
+                        <br>
+                        그렇다면 컴퓨터도 이렇게 and or not으로 표기를 할까요?
+                        <br>
+                        아닙니다! 컴퓨터는 좀 더 간단하게 수식을 씁니다.
+                        <br>
+                        && || ! 이렇게요!
+                        <br>
+                        첫번째 부터 and, or ,not 이라고 할 수 있겠습니다!
+                        <br>
+                        자 그러면 제가 문제를 하나 낼게요!
+                        <br>
+                        (2 < 5 && 3> 1) 은 뭐가 나올까요?
+                        <br>
+                        궁금하시면 직접 돌려보시고 아 나는 충분히 머리속으로도 계산이 가능하다!
+                        <br>
+                        하시면 답을 맞추시면 되겠습니다!
+                        <br>
+                        넵! 정답은 바로 true 입니다! 
+                        <br>
+                        왜용? 그 이유는 바로 저 2 < 5가 크다는 식은 참이고, 3 > 1 도 참이지 않습니까?
+                        <br>
+                        그래서!!! true가 나온겁니다!
+                        <br>
+                        나머지 그럼 or 은 어떻게 해야 참이 나올까요?
+                        <br>
+                        직접 해보시길 바랍니다! 콘솔 창 열어서~  2 < 1 || 3 >2 이렇게 써봅시다!
+                        <br>
+                        그러면 true가 나올겁니다! 그 이유는 2 < 1 은 거짓이지만 3 >2 는 참이지 않습니까?
+                        <br>
+                        그래서 true가 나오는 겁니다! 이 or은 2개의 식 ,조건 들중에서 하나만! 맞아도 true가 나오기 때문에 !!
+                        <br>
+                        매우 유용하게 쓰입니다!
+                        <br>
+                        not은 뭐 설명 안해도 되겠죠??
+                    </p>
+                    <hr>
+                    <h5>조건부 3항 연산자!!</h5>
+                    <p>
+                        자 우리는 이제 참 거짓을 판별하는 것도 알고
+                        <br>
+                        and, or, not 도 배웠습니다!
+                        <br>
+                        그렇다면! 만약에 조건이 3개가 있따!
+                        <br>
+                        그러면 어떻게 처리를 해야 할까요?
+                        <br>
+                        만약에 차를 운전 하는데 
+                        <br>
+                        앞에 노인과 어린아이가 있다 
+                        <br>
+                        그럼 밟아야 하는 것은? 
+                        <br>
+                        네 여기서 인성쓰레기가 누구인지 알 수 있는 좋은 방법이였습니다.
+                        <br>
+                        정답은 브레이크죠
+                        <br>
+                        재미 없었으면 그냥 공부나 하죠
+                        <br>
+                        근데 이거를 수식으로 표현이 가능합니다! 어떻게요?
+                        <br>
+                        바로 3항 연산자를 써서 나타낼수 있습니다! 
+                        <br>
+                        3항 연산자를 컴퓨터 식으로 표현하는 방법은 이렇습니다!
+                        <br>
+                        차앞 = (밟아야하는것) ? 노인:어린아이
+                        <br>
+                        이렇게 만들수 있습니다!
+                        <br>
+                        자 우리는 브레이크를 밟아야 하기 때문에
+                        <br>
+                        만약에 이게 진짜 컴퓨터로 코딩을 한다면 false가 나오겠죠!
+                        <br>
+                        둘다 정답이 아니기 때문에! 그렇습니다
+                        <br>
+                        그래서 재미삼아서 예시를 들었는데 
+                        <br>
+                        정식 적인 3항 연산자는 바로 이겁니다
+                        <br>
+                       <strong style="color: red;">찾고싶은 값 = (조건식) ? 참일때:거짓일때</strong>
+                        <br>
+                        네 만약에 조건식이 참이면 노인을 선택하고 조건식이 거짓이면! 어린아이를 선택하는 겁니다!
+                        <br>
+                        그럼 여기서 또 문제
+                        <br>
+                        let voteable = (age < 18) ? "Too young":"Old enough";
+                        <br>
+                        여기서 voteable이 18이면 too young일까요 아니면 Old enough 일까요?
+                        <br>
+                        정답은 오른쪽인 Old enough 입니다! 
+                        <br>
+                        왜냐 voteable은 18이라는 변수를 가지고 있는데 조건식이 18미만이면 too young 
+                        <br>
+                        18이상이면 Old enough 아닙니까?
+                        <br>
+                        그래서 Old enough 가 나오는 겁니다!
+                        <br>
+                        이해가 되셨나요? 
+                        <br>
+                        그렇다면 이제 홈으로 가서 조건식을 배워보도록 하죠!
+                    </p>
+                </div>
+            </section>
+        </div>
+        <script>
+            var number = 5;
+
+        </script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/object.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css1.css">
+    <title>List</title>
+    <style>
+        #ul_cat{
+        list-style-image: url("cat.png");
+    }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <b style="font-size: 40px">List</b>
+        <br><br>
+    </div>
+
+    <h1>이번에 다뤄볼 문법은 List 이다.</h1>
+    <p>먼저 List는 말그대로 목록을 보여주기 위한 문법인데 아래와 같이 세가지로 나뉜다.</p>
+
+    <p>1. Unordered lists (&lt;ul&gt;, &lt;li&gt;, &lt;/li&gt;, &lt;/ul&gt;)</p>
+    <p>2. Ordered lists (&lt;ol&gt;, &lt;li&gt;, &lt;/li&gt;, &lt;/ol&gt;)</p>
+    <p>3. Description lists (&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;, &lt;dd&gt;, &lt;/dt&gt;, &lt;/dl&gt;)</p>
+
+    <h2 id="red_color">1번 Unordered List부터 살펴보자</h2>
+    
+    <span>먼저 리스트의 테두리의 시작과 끝을 <span id="red_color">&lt;ul&gt;</span>, <span id="red_color">&lt;/ul&gt;</span>로 만들어 준다.</span>
+    <br>
+    <span>그리고 리스트에 넣을 내용을 <span id="red_color">&lt;li&gt;</span>, <span id="red_color">&lt;/li&gt;</span>태그 사이에 넣어 준다.</span>
+
+    <p>아래와 같이 <span id="red_color">순서가 없고</span>, 글머리 <span id="red_color">기호가 있는게</span> 첫번째 <span id="red_color">Unordred List</span> 이다.</p>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Unordered List</li>
+        <li>Ordered List</li>
+        <li>Description List</li>
+    </ul>
+
+    <span>만약 여기서 조금더 세분화 하여 나누고 싶으면 또다시 만들어 놓은 리스트 안에 </span>
+    <br>
+    <span><span id="red_color">&lt;li&gt;</span>, <span id="red_color">&lt;/li&gt;</span>를 이용하여 내용을 더 넣어도 된다.</span>
+
+    <h3>Unordered List + alpha</h3>
+    <ul>
+        <li>Unordered List</li>
+            <ul>
+                <li>이런식으로 들여 넣으며 추가 가능 1</li>
+            </ul>
+        <li>Ordered List</li>
+        <ul>
+            <li>이런식으로 들여 넣으며 추가 가능 2</li>
+            <ul>
+                <li>이런식으로 들여 넣으며 추가 가능 3</li>
+            </ul>
+        </ul>
+        <li>Description List</li>
+    </ul>
+
+    <span>그런데 글 머리가 만족스럽지가 않다 싶으면 style을 줄 수 있다.</span>
+    <span>들여쓰기 전에 바로 사각형 모양의 글머리를 사용하고 싶다면 저번에 배운 css를 이용하여 다음과 같이 나타낼 수 있다.</span>
+    <span>스타일 명시하는 부분에 list-style-type: square 를 넣자</span>
+    
+    <h3>Unordered List + beta</h3>
+    <ul>
+        <li id="ul_square">Unordered List</li>
+        <li id="ul_square">Ordered List</li>
+        <li id="ul_square">Description List</li>
+    </ul>
+
+    <span>아 근데 이것도 별로다? 그럼 저번에 배운 이미지를 활용하여 image도 사용 가능하다.</span>
+    <span>헤더 안의 스타일 명시하는 부분에 list-style-image: url("경로")를 넣으면 된다. (html과 같은경로)</span>
+    <span id="green_color">css에 넣어서 활용해보려 했는데 어찌됐는지 실패하여 해당 html 상단 header안에 스타일 명시함.</span>
+    <h3>Unordered List + beta</h3>
+    <ul>
+        <li id="ul_cat">Unordered List</li>
+        <li id="ul_cat">Ordered List</li>
+        <li id="ul_cat">Description List</li>
+    </ul>
+
+    <h2 id="green_color">그 다음 2번 Ordered List를 살펴보자.</h2>
+    
+    <span>아까와 비슷하게 리스트의 테두리의 시작과 끝을 <span id="green_color">&lt;ol&gt;</span>, <span id="green_color">&lt;/ol&gt;</span>로 만들어 준다.</span>
+    <br>
+    <span>그리고 리스트에 넣을 내용을 <span id="green_color">&lt;li&gt;</span>, <span id="green_color">&lt;/li&gt;</span>태그 사이에 넣어 준다.</span>
+
+    <h3>Ordered List</h3>
+    <p>아래와 같이 순서가 있고, 번호가 있는것이 두번째 Ordred List 이다.</p>
+    <ol>
+        <li>Unordered List</li>
+        <li>Ordered List</li>
+        <li>Description List</li>
+    </ol>
+
+    <span>여기 부분 또한 원한다면 숫자를 영어 알파벳으로, 그리스 알파벳으로 등 바꿀 수 있다.</span>
+    <span>방법은 1번과 같이 style 명시 부분에 list-style: lower-alpha; 또는 list-style: lower greek를 사용하면 된다. (추가로 로마어, 라틴어도 있다)</span>
+
+    <ol>
+        <li id="ol_lower_alpha">Unordered List</li>
+        <li id="ol_lower_greek">Ordered List</li>
+        <li>Description List</li>
+    </ol>
+
+    <h2 id="blue_color">마지막 3번 Description List를 살펴보자.</h2>
+
+    <span>이것도 비슷하지만 태그가 완전 다르다. 리스트의 테두리의 시작과 끝을 <span id="blue_color">&lt;dl&gt;</span>, <span id="blue_color">&lt;/dl&gt;</span>로 만들어 준다.</span>
+    <br>
+    <span>그리고 리스트 조금 더 큰 주제? Term을 <span id="blue_color">&lt;dt&gt;</span>, <span id="blue_color">&lt;/dt&gt;</span>태그 사이에 넣어 준다.</span>
+    <br>
+    <span>마지막으로 Term을 설명하는 더 디테일한 내용을 <span id="blue_color">&lt;dd&gt;</span>, <span id="blue_color">&lt;/dd&gt;</span>태그 사이에 넣어 준다.</span>
+
+    <h3>Description List</h3>
+    <p>아래와 같이 순서가 없고, 번호도 없으며 대신 들여쓰기가 있는게 마지막 Description List 이다.</p>
+    <dl>
+        <dt>Term: Types of List</dt>
+            <dd>Description: Unordered List</dd>
+            <dd>Description: Ordered List</dd>
+            <dd>Description: Description List</dd>
+    </dl>
+
+    <span>3번을 더 명확한 예시로 보여주려면 아래와 같이 사용가능하다.</span>
+
+    <dl>
+        <dt>스터디 구성원: 남자</dt>
+            <dd>경찬</dd>
+            <dd>정우</dd>
+            <dd>이현</dd>
+        <dt>스터디 구성원: 여자</dt>
+            <dd>수미</dd>
+            <dd>은지</dd>
+    </dl>
+
+    <li><a href="home.html">Home 가기</a></li>
+</body>
+</html>
