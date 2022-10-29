@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JS101</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cheatsheet.css" rel="stylesheet" />
+<style>
+            .list-group-item{
+              text-align: center;
+            }
+            header.masthead {
+                padding-top: 10.5rem;
+                padding-bottom: 1rem;
+                text-align: center;
+                color: #fff;
+                background-image: url("https://cdn.clien.net/web/api/file/F01/11281882/89d0f42a11bce8.jpg?w=780&h=30000");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+                width: 293px;
+            }
+            @media (min-width: 992px){
+                #mainNav {
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    border: none;
+                    background-color: currentcolor;
+                    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+                }
+            }
+            .section-heading{
+                margin-top: 300px;
+            }
+            .codeblock{
+              display:block;
+              white-space:pre-wrap;
+            }
+        </style>
+                              <script>
+                                document.addEventListener("DOMContentLoaded", function(){
+                                const str = `function pow(x,n){
+                                  let result=1
+                                  for(let i=0; i<n; i++){
+                                    result *=x
+                                  }
+                                  return result
+                                }
+                                let x=prompt("x?","")
+                                let n=prompt("n?","")`
+                                document.querySelector("#ex1").innerHTML = str;
+                              });
+                              </script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">JavaScript Introduce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">홈으로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" >강사 : 김이현</h2>
+                </div>
+            </div>
+        </header>
+        <scetion>
+            <div class="bd-cheatsheet container-fluid bg-body">
+                <section id="content">             
+                  <article class="my-3" id="typography">
+                    <div>
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <p class="display-1">주석과 줄바꿈. 그리고 여백</p>
+                      </div></div>
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <p class="h1">주석</p>
+                      <script>
+                        //주석 = 개발자에게 코드를 설명하기 위해 써놓은 글. //2개의 뒤에 내용은 컴파일러가 문법상
+                        const a = 0;
+                        const b = 1;
+                        a+b; //1 이런식으로 미리 결과값을 표시하기도 한다. 
+                        //미래의 타인이 되는 자기 자신을 위해서도 주석은 꼬박꼬박 달아야 한다.
+                        //주석과 같은 줄에 넣으면 실행되지 않는다. a+b
+                        /* 이것은 여러줄을 한번에 주석처리할때, 혹은 여러 글을 주석처리해야 할 때 쓰는 기호이다. 
+                        주석은 언어에 따라서 조금씩 다르나 대부분 이런식이다. 
+                        
+                        //
+                        --
+                        #
+                        <!-- -->
+                        
+                        */
+                      </script>
+
+                      <p class="h1">줄바꿈과 세미콜론</p>
+                      <script>
+                        //세미콜론 = 컴퓨터에게 문장의 끝을 알려주는 표기법. 그리고 가독성
+                        //보통 이렇게 엔터를 통해 구분하면
+                        console.log(a+b)
+                        //해당코드가 잘 동작하는 것을 알 수 있다. 이것을 줄바꿈이라고 한다. 
+                        //반드시 해야하는 것은 아니지만 자바스크립트는 줄바꿈 처리되어있는 
+                        //모든 행에 대해서 자동으로 ;이 되어있다고 인식한다.(자동으로 붙여준다)
+                        //cf. ASI 라는 녀석이 있다. (automatic semicolon inserion = 자동 세미콜론 삽입)
+                        //그러나 이런식으로 1줄에 모두 표현하게 되면 에러가 터진다.
+                        //console.log(a+b) a+b 
+                        //Uncaught SyntaxError: Unexpected identifier
+                        console.log(a+b); a+b 
+                        function text() {
+                            return 
+                              {
+                                text : '가나다'
+                              }
+                          }
+                          console.log(text());
+                        function text() {
+                          return {
+                              text : '가나다'
+                            }
+                        }
+
+                        console.log(text());
+                        //본인이 개행 등에 대한 자신이 있다면 안붙여도 상관 없다. ASI가 있으니까.
+                        //그게 아니라면 붙여라. 어차피 java같은 언어를 하면 무조건 붙인다.
+                        //따라서 자바스크립트를 할때에는 ;을 붙이는 법을 들이면 좋다.
+
+                        //+++ 수업외 번외
+                        //function a(){} 여기에는 블록처리가 되어있는 곳은 하면안된다.
+                        //근데, const obj = {}; 이렇게 선언하는 부분만은 예외로 해줘야 한다.
+                        //for 문 안에서는 ; 처리가 필수다. (명령문이기 때문)
+                        //쓰는 애들 C, c++, c#, java, js
+                      </script>
+
+                      <p class="h1">여백(들여쓰기)</p>
+                    <script>
+                      //보통 들여쓰기는 탭 하나이다. 
+                      //탭 하나쓰기는 스페이스바 4개이다.
+                      
+                      //블록 안에서 들여쓰기는 스페이스바 2개가 탭 1개이다.
+                      //들여쓰기를 쓰는 이유. 줄바꿈과 마찬가지로 가독성을 위해서.
+                      for(let i=0; i<10;i++){
+                        console.log(i);if(i%2==0){i++;}else{i+=2;console.log()}
+                      }
+                      for(let i=0; i<10;i++){
+                        console.log(i);
+                        if(i%2==0){
+                        i++;
+                        }else{
+                        i+=2;  
+                        console.log(i%2==0)
+                        }
+                      }
+                      for(let i=0; i<10;i++){
+                        console.log(i);
+                        if(i%2==0){
+                          i++;
+                        }else{
+                          i+=2;
+                          console.log(i)
+                        }
+                      }
+                      //+++ 수업외 번외
+                      //for,while,if는 뒤에 공백 한칸이 규칙
+                      //for (), while (), if ()
+                      // 논리적으로 다른 블록은 한줄 띄어쓰기
+                      // 한줄은 너무 길지 않게.
+                      // 연산자 앞 뒤는 공백 하나씩
+                      // 중첩된 호출 뒤에는 공백 한칸씩
+                      // 중괄호는 앞에 공백을 한칸 두기
+                      // 인수 사이에 공백은 한칸.
+
+
+
+                    </script>
+                      </div></div>
+              
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <p class="lead">
+                        This is a lead paragraph. It stands out from regular paragraphs.
+                      </p>
+                      </div></div>
+              
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                      <pre>
+                        
+                        <code class="codeblock" id="ex1">
+                        </code>
+                      </pre>
+                      </div></div>
+
+                      
+                
+        
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <hr>
+                      </div></div>
+              
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                      </blockquote>
+                      </div></div>
+              
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <ul class="list-unstyled">
+                        <li>This is a list.</li>
+                        <li>It appears completely unstyled.</li>
+                        <li>Structurally, it's still a list.</li>
+                        <li>However, this style only applies to immediate child elements.</li>
+                        <li>Nested lists:
+                          <ul>
+                            <li>are unaffected by this style</li>
+                            <li>will still show a bullet</li>
+                            <li>and have appropriate left margin</li>
+                          </ul>
+                        </li>
+                        <li>This may still come in handy in some situations.</li>
+                      </ul>
+                      </div></div>
+              
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <ul class="list-inline">
+                        <li class="list-inline-item">This is a list item.</li>
+                        <li class="list-inline-item">And another one.</li>
+                        <li class="list-inline-item">But they're displayed inline.</li>
+                      </ul>
+                      </div></div>
+              
+                    </div>
+                  </article>
+                </section>
+            </div>
+        </scetion>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/object.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

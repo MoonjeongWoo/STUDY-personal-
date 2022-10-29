@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JS101</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cheatsheet.css" rel="stylesheet" />
+<style>
+            .list-group-item{
+              text-align: center;
+            }
+            header.masthead {
+                padding-top: 10.5rem;
+                padding-bottom: 1rem;
+                text-align: center;
+                color: #fff;
+                background-image: url("https://cdn.clien.net/web/api/file/F01/11281882/89d0f42a11bce8.jpg?w=780&h=30000");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+                width: 293px;
+            }
+            @media (min-width: 992px){
+                #mainNav {
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    border: none;
+                    background-color: currentcolor;
+                    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+                }
+            }
+            .section-heading{
+                margin-top: 300px;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">JavaScript 함수</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">홈으로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" >강사 : 멋쟁이님💜</h2>
+                    <p>함수는 이현님께서 저번에 설명해 주셔서 간단하게 집고 넘어갈게용..</p>
+                </div>
+            </div>
+        </header>
+        <scetion>
+            <div class="bd-cheatsheet container-fluid bg-body">
+                <section id="content">             
+                  <article class="my-3" id="typography">
+                    <div>
+                        <p class="h1">함수</p>  
+                        <p>함수의 정의 함수 선언 및 표현식 등 배워보도록 하겠습니다.</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <p class="h5">1. 함수란?</p>
+                        <ul>
+                            <li>함수란 하나의 로직을 재실행 할 수 있도록 하는 것으로 코드의 재사용성을 높여줍니다.</li>
+                            <li>함수를 사용하려면 함수를 호출하고자 하는 범위 내에서 함수를 정의해야만 합니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">2. 함수 선언 및 표현식, 호출</p>
+                        <ul>
+                            <li>함수는 다음과 같은 함수 키워드로 구성되어 있습니다.</li>
+                            <ul>
+                                <li>함수의 이름</li>
+                                <li>괄호 안에서 쉼표로 분리된 함수의 매개변수 목록</li>
+                                <li>중괄호 {} 안에서 함수를 정의하는 자바스크립트 표현</li>
+                            </ul>
+                            <li>
+                               <p><strong>예를 들어보겠습니다.</strong></p>
+                                <p class="h4">
+                                    function sumi( number ) { <br>
+                                    return number * number;<br>
+                                }
+                                </p>
+                                <p>함수 sumi는 number라는 하나의 매개변수를 가집니다. 이 함수는 인수(number) 자체를 곱하여 반환하는 하나의 문장으로 구성되어있습니다.</p>
+                                <p>return문은 함수에 의해 반환된 값을 지정합니다.</p>
+                                <p>매개변수는 값으로 함수에 전달됩니다. 그러나 함수가 매개변수의 값을 바꾸더라도 이는 전역적으로 또는 함수를 호출하는 곳에는 반영되지 않습니다.</p>
+                                <p>
+                                    ex.1.)<br>
+                                    var ex_a = 10; <br>
+                                    var ex_b = 20; <br>
+                                    function ex(ex_a, ex_b){<br>
+                                        return ex_a + ex_b;<br>
+                                    }<br>
+
+                                    ex(ex_a, ex_b); <br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>함수 호출할 때는 ex(ex_a, ex_b) </p>
+                                <p>
+                                    ex.2.)<br>
+                                    function myFunc(theObject){<br>
+                                        theObject.make = "Toyota"<br>
+                                    }<br>
+                                    var mycar = {make : "Honda", model : "Accord", year : 1998}; //mycar에 키와 값으로 변수 선언 <br>
+                                    var x, y; // x y 변수 선언 <br><br>
+
+                                    x = mycar.make // x의 값은 "Honda"입니다. <br><br>
+
+                                    myFunc(mycar); //함수 호출 <br><br>
+                                    y = mycar.make; //y의 값은 "Toyota"입니다. make 속성은 myFunc에서 변경되었습니다. <br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                            </li>
+                            <strong>함수 문제를 간단하게 풀어보도록 합시다.</strong>
+                            <li>문제1) 자유롭게 <strong>"멋쟁이방장님(수미짱, 수미최고);" 값이 24</strong>가 나오도록 코드를 출력해보시길 바랍니다. </li>
+                            <li>문제2) 스택형 동작 문제입니다.<br>
+                                function loop(x){ <br>
+                                    if(x < 0) <br>
+                                        return; <br>
+                                    console.log('begin' + x); <br>
+                                    loop(x - 1); <br>
+                                    console.log('end' + x); <br>
+                                } <br>
+                                loop(3); <br>
+                                <strong style="color: red;">**콘솔창에 복붙하지말고 어떻게 나올지 맞춰보세요.**</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">3. 재귀함수란?</p>
+                        <ul>
+                            <li>위에서 문제2번 풀어보셨나요? 재귀함수 문제였습니다.</li>
+                            <li>함수가 자신을 다시 호출하는 구조로 만들어진 함수입니다.</li>
+                            <li>재귀함수는 종료조건이 있어야 합니다. 종료조건을 설정해주지 않으면 무한 반복을 하게 됩니다.</li>
+                            <li>재귀함수로 작성이 되는 코드는 반복문으로도 작성할 수 있습니다.</li>
+                            <li>
+                                <p>ex.1.) <br>
+                                    function f(n){ <br>
+                                        if(n <= 1) { <br>
+                                            return 1; <br>
+                                        } <br>
+                                        return n + f(n-1) <br>
+                                    } <br>
+                                    console.log(f(100)) <br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                    <p>여기서 사용된 for문 조건은 1부터 순회한다. 재귀함수의 경우는 100부터 순회한 다음 호출 스택에 쌓여 있는 값을 처리해 나가게 되는데 스택은 LIFO방식이기 때문에 이때 스택에 제일 마지막으로 반환된 1부터 100까지 순차적으로 더해서 값을 반환하게 된다. 곱하기 방식도 위와 같다.</p>
+                                    <p>라고 글만 보니깐 뭐라는지 모르겠으니 말로 설명해드릴게요</p>
+                                </p>
+                            </li>
+                            <strong>제가 또 재귀함수 문제를 구해왔습니다.</strong>
+                            <li>문제1) <br>
+                                function fac(num) { <br>
+                                    if(num < 1){ <br>
+                                        return 1; <br>
+                                    } <br>
+                                    return num * fac(num - 1); <br>
+                                } <br>
+                                <br>
+                                const num = 5; <br>
+                                let result = fac(num); <br>
+                                console.log("결과 값은 어떻게 나올까요?");
+                            </li><br>
+                            <li>문제2) <br>
+                                let test = 0; <br>
+                                function solution(num){ <br>
+                                    if(test > 500){ <br>
+                                        return -1 <br>
+                                    }else if(num == 1){ <br>
+                                        return test; <br>
+                                    }else if(num%2 == 0){ <br>
+                                        num = num/2; <br>
+                                        test++; <br>
+                                        return solution(num); <br>
+                                    }else{ <br>
+                                        num = num* 3+1; <br>
+                                        test++; <br>
+                                        return solution(num); <br>
+                                    } <br>
+                                } <br><br>
+
+                                console.log(solution(10)); <br><br>
+                                <strong>와 문제2번 프로그래머스 문제입니당(호다닥 도망ヽ(✿ﾟ▽ﾟ)ノ)</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        많이 힘드네요...
+                    </div>
+                  </article>
+                </section>
+            </div>
+        </scetion>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/object.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

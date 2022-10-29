@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JS101</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cheatsheet.css" rel="stylesheet" />
+<style>
+            .list-group-item{
+              text-align: center;
+            }
+            header.masthead {
+                padding-top: 10.5rem;
+                padding-bottom: 1rem;
+                text-align: center;
+                color: #fff;
+                background-image: url("https://cdn.clien.net/web/api/file/F01/11281882/89d0f42a11bce8.jpg?w=780&h=30000");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+                width: 293px;
+            }
+            @media (min-width: 992px){
+                #mainNav {
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    border: none;
+                    background-color: currentcolor;
+                    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+                }
+            }
+            .section-heading{
+                margin-top: 300px;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">JavaScript Introduce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">홈으로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+      <section>
+        <div>
+            <h2>조건문!</h2>
+            <hr>
+            <p> 
+                조건문 하면 생각보다 많은 사람들이 어려워합니다
+                <br>
+                저도 많이 어려워 했고요
+                <br>
+                근데 잘 생각해 보면 그닥 그렇게 어려운것도 아니라고 생각합니다
+                <br>
+                네 그렴 조건문을 배우도록 해보죠
+                <br>
+                <hr>
+                <h5>조건문 배우기</h5>
+                <br>
+                조건문은 말 그대로 조건이 있을때를 말하는 겁니다
+                <br>
+                얘를 들면 이라고 할수 있죠
+                <br>
+                혹시 주변에 만약에 친구 없나요?
+                <br>
+                그 친구는 아마 조건문을 마스터한 사람일 겁니다
+                <br>
+                조건문은 다음과 같습니다
+                <br>
+                내가 만약 외로울때면 누가 나를 위로해주지?
+                <br>
+                를 컴퓨터 언어로 해석을 해봅시다
+                <br>
+                일단 컴퓨터는 한글보다 영어를 좋아하기 때문에 영어로 번역을 해봅시다
+                <br>
+                어... 우리가 영어는 잘 못하지만 코딩은 잘 할수 있다 생각합니다
+                <br>
+                영어 만드는게 힘들다 그러면 한 단어만 생각해 봅시다!
+                <br>
+                조건문이 항상 뒤 따라오는 단어가 무엇일까요?
+                <br>
+                생각해 보면 항상 만약이라는 단어가 따라옵니다
+                <br>
+                만약 ~~~라면, 만약 ~~~일때, 등등 많습니다
+                <br>
+                항상 만약에 뒤에는 조건문이 붙죠 
+                <br>
+                그래서 우리는 만약을 조건문으로 씁니다
+                <br>
+                근데 이제 우리모두가 아는 사실은 컴퓨터는 한글보다 영어중심입니다
+                <br>
+                그래서~ 우리는 만약을 영어로 써야 하겠죠
+                <br>
+                그래서 if를 쓰는 겁니다
+                <br>
+                그래서 내가 만약 배고프면 ~~ 을 컴퓨터 언어로 번역을 하면?
+                <br>
+                if(i == hungry) 라고 할수가 있겠죠!!
+                <br>
+                그리고 이런 if 구절을 if문이라고 우리는 고급지게 부른답니다
+                <br>
+                그리고 이 if 문을 쓰는 형식도 정해져 있습니다
+                <br>
+                if를 치고 나서 if 바로 뒤에 소괄호 () <- 얘를 넣어줍니다
+                <br>
+                그 다음에는 이 중괄호 {} <- 요놈을 써줍니다
+                <br>
+                그럼 최종적으로는 if(){} 이렇게 되겠네요
+                <br>
+                그렇다면 이제 조건을 써야겠죠?
+                <br>
+                조건은 저어어기 소괄호에다가 씁니다
+                <br>
+                만약에 내가 잘생겼다면을 if문으로 바꾸면?
+                <br>
+                if(me == 미남) 이렇게 되겠죠?
+                <br> 
+                네 그런 다음에 조건만 붙이면 문장이 성립이 안되잖습니까?
+                <br>
+                컴퓨터도 문장을 다 만들어 줘야지 일을 합니다
+                <br>
+                그래서 우리는 결과를 저 중괄호 {} <- 여기에다가 쓰는 겁니다
+                <br>
+                자 다시 미남으로 돌아가서~ 내가 만약 미남이면 모델을 하겠다 를 컴퓨터 언어로 바꾸면?
+                <br>
+                if(me == 미남){do model}이라고 할수 있겟죠?
+                <br>
+                아유 if문 참 쉽다 그죠?
+                <br>
+                이제 우리가 할일은 저 소골호, 중괄호 에 있는 애들을 변수 처럼 만들어 주면 됩니다!
+                <br>
+                자 그러면 10초 과제르 한번 해보죠
+                <br>
+                i = 8이라고 변수선언을 해주세요
+                <br>
+                그리고 만약에 i가 10보다 작으면! 콘솔창에다가  
+                <br>
+                메롱이라고 나오게 해주세요!
+                <br>
+                메롱이 나오시나요?
+                <br>
+                네 그러면 아주 기본적인 틀은 슬슬 잡히는 단계입니다!
+                <br>
+                그러면 이제 if문 말고 다른 조건문들도 보러가시죠!
+            </p>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>else if</h3>
+            <p>
+                자 요놈은 뭐 하는 놈일까요? else if
+                <br>
+                요 else if 는 if 문의 또다른 버젼이라고 생각 하시면 됩니다
+                <br>
+                만약에 조건이 2개가 있어요
+                <br>
+                자 롤 라인 어디 가세요 물을때 보통 다 간다 하지 않고
+                <br>
+                탑이요, 미드요, 정글이요, 등등 이렇게 나오지 않겠습니까?
+                <br>
+                그러면 라인을 2개 간다고 치죠
+                <br>
+                저는 탑 미드를 갑니다! 라고 말하면 그러면 챔프는 뭐쓰세요?
+                <br>
+                하고 꼬리 질문이 나오겠죠? 이거를 else if 문을 써가지고 만들어 봅시다
+                <br>
+                저는 탑 할때는 베인을 하고 미드 할때는 야스오를 합니다 를 if문으로 바꿔보죠!
+                <br>
+                if (line == top) {champ = vayne}
+                <br>
+                else if(line == mid){ champ = yasuo}
+                <br>
+                이렇게 되겠죠?
+                <br>
+                네 여기서 else if 문을 잘 보시면! if문이랑 표기법이 완전히 똑같죠?
+                <br>
+                보시는 바와 같이 else if 문은 if문과 똑같이 씁니다! 단지 else 라는 구문이 들어가서 그렇지
+                <br>
+                그렇다면! 설명 보다는 직접 하는게 더 재미있고 배우기도 빨리 배우니!
+                <br>
+                i 라는 변수에 아까 8을 집어 넣었죠?
+                <br>
+                그러면 그 if 문에다가 else if 문을 추가 하죠!
+                <br>
+                근데 추가 하기전에! 조심 하셔야 될게 있습니다
+                <br>
+                else if 문은 if문이 먼저 있어야 해요! 없으면 else 라는 단어가 무의미 해지기 때문에
+                <br>
+                그리고 else if문은 if문 안에다가 쓰시면 안되요!               
+                <br>
+                물론 쓸수야 있습니다!
+                <br>
+                근데 if문 안에 if문이 하나 더 들어가야지만 쓸수가 있겠죠?
+                <br>
+                여기서 if문 안에 if문이 하나 더 있는거를 이중조건문이라고 합니다!
+                <br>
+                다시 돌아와서! 아까 만들었던 if문 뒤에! else if문을 하나 만들죠!
+                <br>
+                하나 만드셨으면! 조건을 추가해 주세요!
+                <br>
+                i 가 문자열 "i" 보다 크면은 i변수를 출력해주세요! 라고 else if 문을 추가해주세요!
+                <br>
+                답이 뭐가 나오나요?
+                <br>
+                남들과 다른 정답이 나오면은 그건 다시 해보도록 합시다!
+            </p>
+        </div>
+        <br>
+        <hr>
+        <div>
+                <h3>else</h3>
+                <br>
+                <p>자 우리는 else if 문 까지 배웠죠?
+                    <br>
+                    그러면 else는 무엇일까요?
+                    <br>
+                    else는 꽤나 쉽습니다!
+                    <br>
+                    if문이나 else if문 조건식에서! 해당 되지 않는 애들!
+                    <br>
+                    을 else문 을 통해서 짬처리 하는 겁니다
+                    <br>
+                    한마디로 말하자면 짬통, 잔반 처리반이에요
+                    <br>
+                    예시로 귤 상자에 귤 있다고 합시다! 
+                    <br>
+                    귤 상자에서 썩은것과, 벌레먹은것 들은 빼고 새 상자에 담는다
+                    <br>
+                    를 if문을 써서 만들면 어떻게 만들까요?
+                    <br>
+                    if (귤상자.귤 == 썩은것) { 빼다}
+                    <br>
+                    else if (귤상자.귤 == 벌레먹은것!){빼다}
+                    <br>
+                    else{ 새상자에 담는다}
+                    <br>
+                    이렇게 할 수가 있겠죠?
+                    <br>
+                    네 근데 else는 보는 것 처럼, 조건문을 안씁니다!
+                    <br>
+                    아까 제가 짬통이라고 하지 않았습니까? 나머지를 처리하는 전문반 같은 애들입니다
+                    <br>
+                    그래서 얘네들은 조건문을 안쓰고 그냥 결과만 보여주세요! 라고 컴퓨터에게 시키는 겁니다!
+                    <br>
+                    얼추 이해가 되셨나요?
+                    <br>
+                    이해가 되셨다면 한번 이제 전체적인 if문, else if문, else문을 이용해서
+                    <br>
+                    프로그램을 하나 만들도록 하죠!
+                    <br>
+                    그전에 담배 피고 오실분들은 피고 오시구요
+                    <br>
+                    저는 좀 있다가 나중에 만들도록 하겠습니다!
+                </p>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h4>조건문에 추가하기</h4>
+            <br>
+            <p>
+                자 우리는 이제 조건문이다! 하는거를 어느정도 배웠습니다
+                <br>
+                그렇다면 이 조건문(_소괄호_)에도 들어갈 수가 있는게 있을까?
+                <br>
+                네 대표적으로 비교연산자가 있습니다!
+                <br>
+                아까 비교 연산자를 배울때 컴퓨터가 1아니면 0으로 표현을 한다고 했죠?
+                <br>
+                네 여기 에서도 쓸수가 있습니다
+                <br>
+                if (여기){}에다가요
+                <br>
+                여기시는 and, or, not도 당연히 포함이 가능하구요! 이상,초과, 이하,미만 등
+                <br>
+                여러가지 조건들도 집어 넣을수가 있습니다!
+                <br>
+                그리고 어떻게 보면 이 비교랑 조건문은 바늘과 실 같은 존재라고도 할 수 있습니다
+                <br>
+                항상 쓰이는 문법이구요, 안쓰면 오히려 사람들이 이상하게 쳐다 볼 정도로
+                <br>
+                같이 쓰이는 애들 중 하나입니다!
+                <br>
+                <br>
+                <br>
+                자 그러면
+                <br>
+                제가 문장 하나를 말씀 드릴테니 그 문장을 if문 과 비교 연산자를 적절히 섞어서
+                <br>
+                코딩해주세요!
+                <br>
+                만약 정우의 솔랭티어가 골드보다 밑에 있거나 실버이고,
+                <br> 롤토체스 티어가 골드 보다 아래 티어에 존재 한다면
+                <br>
+                정우의 실력은 매우 낮거나 팀운이 없다.
+                <br>
+                이거를 코딩 해주세요! 
+                <br>
+                이거는 근데 에러가 나도 괜찮습니다!
+                <br>
+                이 if문을 제대로 이해 했는지 알기 위해서 잠깐 하는것 뿐입니다!
+                <br>
+                다 하셨나요?
+                <br>
+                그렇다면 이제 if문과 비교 연산자를 적절히 잘 섞어서 하실수 있겠군요!
+                <br>
+                근데 이렇게 한번 실행 하고 집에 가는 것과 한번 더 자기가 만든 다른 조건들을
+                <br>
+                만들어 보는게 중요합니다! 이런게 쌓아져서 이제 백준이라는 곳에서 문제도 풀수 있구요
+                <br>
+                지금까지 조건문 이였습니다!
+                <br>
+                홈으로 가시죠 이제!
+            </p>
+        </div>
+      </section>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/object.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

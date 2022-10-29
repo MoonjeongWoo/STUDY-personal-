@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JS101</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cheatsheet.css" rel="stylesheet" />
+<style>
+            .list-group-item{
+              text-align: center;
+            }
+            header.masthead {
+                padding-top: 10.5rem;
+                padding-bottom: 1rem;
+                text-align: center;
+                color: #fff;
+                background-image: url("https://cdn.clien.net/web/api/file/F01/11281882/89d0f42a11bce8.jpg?w=780&h=30000");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+                width: 293px;
+            }
+            @media (min-width: 992px){
+                #mainNav {
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    border: none;
+                    background-color: currentcolor;
+                    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+                }
+            }
+            .section-heading{
+                margin-top: 300px;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">JavaScript 반복문</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">홈으로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" >강사 : 깜찍이님💛</h2>
+                    <p>저 없어서 아쉽죠? 심심하죠?!!</p>
+                </div>
+            </div>
+        </header>
+        <scetion>
+            <div class="bd-cheatsheet container-fluid bg-body">
+                <section id="content">             
+                  <article class="my-3" id="typography">
+                    <div>
+                        <p class="h1">반복문</p>  
+                        <p>반복문의 정의, while문, for문, 반복문의 제어(break,continue), 반복문 중첩, 문제로 진행할 예정입니다.</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <p class="h5">1. 반복문이란?</p>
+                        <ul>
+                            <li>반복문이란 프로그램 내에서 똑같은 명령을 <mark>일정 횟수만큼 반복</mark>하여 수행하도록 제어하는 실행문입니다.</li>
+                            <li>프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로, 가장 많이 사용되는 실행문 중 하나입니다.</li>
+                            <li>반복문을 쓰는 이유 : 여러개의 같은 코드를 반복하고 싶을 때, 자료형에 담긴 자료들을 하나씩 꺼내고 싶을 때 사용</li>
+                            <li>while문/for문(~하는 동안)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">2. while문이란?</p>
+                        <ul>
+                            <li>while 문은 특정 조건을 만족할 때까지 계속해서 주어진 실행문을 반복 실행합니다.</li>
+                            <img src="assets/img/반복문/while01.JPG" width="400px" height="400px"></img>
+                            <li>
+                               <p><strong>while문의 문법은 다음과 같습니다.</strong></p>
+                                <p class="h4">while( 표현식 ) { <br>
+                                    실행문<br>
+                                }
+                                </p>
+                                <p>표현식에는 <mark>boolean</mark> 값이여야 합니다. 즉 <mark>true 또는 false</mark>로 나와야합니다.</p>
+                                <p>
+                                    ex.1.)<br>
+                                    while(true){<br>
+                                        console.log("방장님쵝오")<br>
+                                    }<br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>
+                                    ex.2.)<br>
+                                    while(false){<br>
+                                        console.log("으하하하")<br>
+                                    }<br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>콘솔창에서 보고나니깐 어떤 느낌인지 아시겠나요? 모르면 연락해요 알려드릴게요^^</p>
+                            </li>
+                            <li>
+                                <strong>첫번째 예시를 콘솔창에 돌렸다가 페이지 마비오죠???? 저도 테스트하다가 아차 했답니다..</strong>
+                                <p>- 이렇게 계속해서 끝이 안보이는 로직을 무한루프에 빠졌다고 합니다. 무한루프에 안걸리고싶으면 어떻게 해야할까요?</p>
+                                <p>
+                                    ex.3.)<br>
+                                    let i = 0;<br>
+                                    while(i < 10){<br>
+                                        console.log("반복문 힘들구나..")<br>
+                                        i++; //이것은 증감자입니다.<br>
+                                    }<br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                    <br>이런식으로 표현식 결과가 false가 나오도록 표현식을 변경하는 실행문이 만들어져야겠죠?
+                                </p>
+                            </li>
+                            <strong>*조건 증감자 숫자 등 배웠다는 가정하에 진행 되는 문제입니다.*</strong>
+                            <li>문제0) while문을 사용하여 1부터 10까지 숫자를 찍어보시길 바랍니다.</li>
+                            <li>문제1) while문을 사용하여 1부터 10까지 더한 값을 코드로 출력해보시길 바랍니다.<strong>"1부터 10까지의 합은 : 55 입니다."</strong></li>
+                            <li>문제2) 구구단 7단만 나오게 코드를 짜보시길 바랍니다.(예시 : 7 * 1 = 7 ....)</li>
+                            <li>문제3) 1단부터 3단까지 나오게 코드를 짜보시길 바랍니다.(while문을 두 번 사용해보세요)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">3. do-while문이란?</p>
+                        <ul>
+                            <li>while 문은 <mark>루프에 진입하기 전에 먼저 표현식부터 검사</mark>합니다. 하지만 do-while 문은 <mark>먼저 루프를 한 번 실행한 후에 표현식을 검사</mark>합니다.</li>
+                            <li>즉, do / while 문은 표현식의 결과와 상관없이 무조건 한 번은 루프를 실행합니다.</li>
+                            <li>
+                                <p><strong>do-while문의 문법은 다음과 같습니다.</strong></p>
+                                <p class="h4">do { <br>
+                                    실행문<br>
+                                } while(표현식);
+                                </p>
+                                <p>while문에서 감을 잡으셨으면 do-while은 어머?! 내가 왜 알고 있지?! 할거에요.. 그래줘요.. 제발..</p>
+                                <p>ex.1.) <br>
+                                    let i = 1, j = 1 <br>
+                                    while(i > 3){ <br>
+                                        console.log("i : " + (i++)); <br>
+                                    } <br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>
+                                    ex.2.) // i와 j 는 위에서 선언해 준걸로 사용할게요<br>
+                                    do{<br>
+                                        console.log("j : " + (j++));<br>
+                                    }while(j > 3); <br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>while 문은 표현식에서 false나와서 반복이 안되고 do-while은 우선 실행문을 돌고나서 표현식을 따지니 한 번 도네요!! <br>차이점 알겠나요?</p>
+                            </li>
+                            <li><strong>문제는 음.. while문에 했던 문제를 do-while로 바꿔서 코드를 짜보세요~</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">4. for문이란?</p>
+                        <ul>
+                            <li>for 문은 while 문과는 달리 자체적으로 <mark>초기식, 표현식, 증감식을 모두 포함</mark>하고 있는 반복문입니다.</li>
+                            <li>while 문보다는 좀 더 간결하게 반복문을 표현할 수 있습니다.</li>
+                            <li>
+                                <p><strong>for문의 문법은 다음과 같습니다.</strong></p>
+                                <p class="h4">
+                                    for(초기식; 표현식; 증감식){ <br>
+                                        실행문 <br>
+                                    }
+                                </p>
+                                <p>while문 do-while문을 사용했다면 for문은 금방 이해하실거에요. 예시를 들어보도록 하겠습니다.</p>
+                                <p>ex.1.) <br>
+                                    for(var i = 0; i < 10; i++){ <br>
+                                        console.log("i = " + i) <br>
+                                    }
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>
+                                    ex.2.) <br>
+                                    var sum = 0;<br>
+                                    for(var i = 0; i < 10; i++){ <br>
+                                        sum = sum + i <br>
+                                        i++ <br>
+                                    }
+                                    console.log("sum = " + sum) <br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>반복문은 직접 사용해보고 풀어봐야 이해가 되실거에요</p>
+                            </li>
+                            <li>
+                                <p>반복문안에 반복문을 또 사용할 수 있을까요? (o/x)</p>
+                            </li>
+                            <li>
+                            <strong>*조건 증감자 숫자 등 배웠다는 가정하에 진행 되는 문제입니다.*</strong>
+                            <li>문제0) for문을 사용하여 1부터 10까지 숫자를 찍어보시길 바랍니다.</li>
+                            <li>문제1) for문을 사용하여 1부터 10까지 더한 값을 코드로 출력해보시길 바랍니다.<strong>"1부터 10까지의 합은 : 55 입니다."</strong></li>
+                            <li>문제2) for문을 사용하여 구구단 9단만 나오게 코드를 짜보시길 바랍니다.(예시 : 9 * 1 = 9 ....)</li>
+                            <li>문제3) 1단부터 9단까지 나오게 코드를 짜보시길 바랍니다.(for문을 두 번 사용해보세요)</li>
+                            <li>문제4) for문을 사용하여 <br>
+                                ***** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
+                                ***** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***<br>
+                                ***** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****<br>
+                                ***** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*******<br>
+                                ***** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*********<br> 콘솔창에 찍어보시길 바랍니다.(※전공자분들은 벌써 풀고 놀고있겠죠?ㅎㅎ)
+                                <br><strong style="color: red;">(필.독.!!!! 수미님도 안계시는데 그냥 넘어갈까요? 라는 소리 나오기만 하세요. 지켜보고 있습니다.╰（‵□′）╯)</strong>
+                                </li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">5. break와 continue란?</p>
+                        <ul>
+                            <li>break는 반복작업을 <mark>중간에 중단</mark>시키고 싶을 때 사용합니다.</li>
+                            <li>continue는 <mark>실행을 즉시 중단하면서 반복을 지속</mark>하게 할 때 사용합니다.</li>
+                            <li>
+                                <p><strong>break는 다음과 같습니다.</strong></p>
+                                <p>
+                                    for(var i=0; i < 10; i++){ <br>
+                                        if(i == 5){ <br>
+                                            break;<br>
+                                        } <br>
+                                        console.log(i); <br>
+                                    }<br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>이해가 가나요? break를 사용했을 때 반복문이 끝나죠?</p>
+                                <p><strong>continue는 다음과 같습니다.</strong></p>
+                                <p>
+                                    for(var i=0; i < 10; i++){ <br>
+                                        if(i == 5){ <br>
+                                            continue;<br>
+                                        } <br>
+                                        console.log(i); <br>
+                                    }<br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>i의 값이 5가 되었을 때 실행이 중단 됐기 때문에 콘솔창에 찍힌 값처럼 나옵니다. contine이후 구문이 실행이 안됩니다. 하지만 반복문은 중단되지 않았기 때문에 나머지 결과가 출력된 것!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">.6 for/in문이란?</p>
+                        <ul>
+                            <li>for/in 문은 일반적인 for문과는 전혀 다른 형태의 반복문입니다.(열거형)</li>
+                            <li>for/in 문은 객체의 key 값에 접근할 수 있습니다.</li>
+                            <li>주로 객체에 사용합니다. 즉, 객체 자료형에 자료들을 하나씩 꺼내고 싶을 때 사용합니다.</li>
+                            <li>
+                                <p><strong>for/in문의 문법은 다음과 같습니다.</strong></p>
+                                <p class="h4">
+                                    for(변수명 in 객체식){ <br>
+                                        실행문 <br>
+                                    }
+                                </p>
+                                <p>예시를 보는게 이해하기 좋을 것 같습니다.</p>
+                                <p>예시1) <br>
+                                    var obj = { <br>
+                                        x : 1, <br>
+                                        y : true, <br>
+                                        z : 'sumi' <br>
+                                    }; <br>
+
+                                    for(var k in obj) { <br>
+                                        console.log(k + " : " + obj[k]); <br>
+                                    }<br>
+                                    <strong>=> 어떻게 나올까요? 답은 콘솔창에 ctrl+c/ctrl+v를 해보시길 바랍니다.</strong>
+                                </p>
+                                <p>예제1의 객체 obj에는 세 개의 프로퍼티가 있으며 for/in 문에서 프로퍼티명인 x,y,z 문자열 변수 k에 대입됩니다.
+                                    <br> 프로퍼티값을 표시할 때는 obj[k]와 같이 대괄호 연산을 사용합니다.
+                                </p>
+                                <p>for/in문에서 주의할 사항</p>
+                                <ul>
+                                    <li>1. 프로퍼티를 열거하는 순서</li>
+                                    <ul>
+                                        <li>순서가 보장되는 것이 아닙니다. 원래 프로퍼티 간에는 순서가 없는 것으로 순서를 의식하는 것 자체가 잘못입니다.</li>
+                                        <li>배열의 경우는 순서를 의식하는 데이터이고요</li>
+                                    </ul>
+                                    <li>2. 열거할 수 없는 프로퍼티의 존재</li>
+                                </ul>
+                                <p>for/in 문 특징</p>
+                                <ul>
+                                    <li>enumerable 한 것들만 출력합니다.</li>
+                                    <ul>
+                                        <li>객체자료형을 만들 때 단순히 개발자가 적은 키와 값만 저장되는 것이 아닙니다.</li>
+                                        <li>그 외에 숨겨진 속성 3개가 같이 저장됩니다.</li>
+                                        <li>enumerable 이 true인 값만 출력됩니다.</li>
+                                        <li>Obejct.getOwnPropertyDescriptor(객체명,'객체키명') //콘솔창에 작성해보기</li>
+                                    </ul>
+                                    <li>객체의 prototype도 반복문으로 출력이됩니다. 이것은 생성자를 공부하고 난 뒤 알아가봅시다.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h5">.6 for/of문이란?</p>
+                        <ul>
+                            <li>for/in 문은 for/in 반복문과 유사하지만 배열에 주로 사용합니다.</li>
+                            <li>배열 안에 있는 자료들을 하나씩 꺼내고 싶을 때 사용하는 것 입니다.</li>
+                            <li>배열 뿐만아니라 문자, map, set 등 과 같은 자료형에도 사용이 됩니다.(iterable(symbol.iterator이라는 메서드를 지니고 있는 자료형)인 자료형들에만 적용 가능)</li>
+                            <ul>
+                                <li>변수명[Symbol.iterator]() 라는 메서드를 출력하면 Array Iterator{} 이라는 이상한 것이 출력됩니다.</li>
+                                <li>반복문 출력을 가능하게 해주는 일종의 함수라고 생각하시면 됩니다. 즉, 저게 있어야 for of 반복문이 가능하다고 보면 됩니다.</li>
+                            </ul>
+                    </div>
+                    <div>
+                        조금 힘드네요...
+                    </div>
+                  </article>
+                </section>
+            </div>
+        </scetion>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/object.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

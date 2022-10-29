@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JS101</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cheatsheet.css" rel="stylesheet" />
+<style>
+            .list-group-item{
+              text-align: center;
+            }
+            header.masthead {
+                padding-top: 10.5rem;
+                padding-bottom: 1rem;
+                text-align: center;
+                color: #fff;
+                background-image: url("https://cdn.clien.net/web/api/file/F01/11281882/89d0f42a11bce8.jpg?w=780&h=30000");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+                width: 293px;
+            }
+            @media (min-width: 992px){
+                #mainNav {
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    border: none;
+                    background-color: currentcolor;
+                    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+                }
+            }
+            .section-heading{
+                margin-top: 300px;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">JavaScript Introduce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">홈으로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" >강사 : 김이현</h2>
+                </div>
+            </div>
+        </header>
+        <scetion>
+            <div class="bd-cheatsheet container-fluid bg-body">
+                <section id="content">             
+                  <article class="my-3" id="typography">
+              
+                    <div>
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <p class="display-6">1. 자바스크립트란?</p>
+                      </div></div>
+
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <hr>
+                      </div></div>
+              
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <blockquote class="blockquote">
+                        <p>객체 기반의 스크립트 언어다.</p>
+                        <footer class="blockquote-footer">만든사람 : <cite title="Source Title">브렌던 아이크</cite></footer>
+                      </blockquote>
+                      </div></div>
+              
+              
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                      <ul class="list-unstyled">
+                        <li>객체지향</li>
+                        <li>큰 문제를 작게 쪼개는 것이 아니라, 작은 문제들을 해결할 수 있는 객체를 만들어서 객체를 조합해서 큰 문제를 해결하는 방법</li>
+                        <li>캡슐화 = 정보은닉, 상속 = 재사용, 다형성 = 확장, </li>
+                        <li>cf.나중에 알아볼 것 객체지향의 5원칙</li>
+                      </ul>
+                      </div></div>
+
+                      <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                        <ul class="list-unstyled">
+                          <li>객체 = object = inastance</li>
+                          <li>대상. 이름.</li>
+                          <li>클래스 = class = 객체의 모음</li>
+                          <li>붕어빵과 붕어빵틀.</li>
+                          <li>메소드 = method = 동작하는 것 -> function</li>
+                          <li>객체가 어떤 행동을 하도록 정의하는 것</li>
+                        </ul>
+                        </div></div>
+
+                        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                            <ul class="list-unstyled">
+                              <li>스크립트 언어.</li>
+                              <li>수정이 빈번하게 발생하는 소스코드를 한줄씩 바로바로 실행하는 방식의 언어.</li>
+                              <li>인터프리터(통역) 언어라고도 한다.</li>
+                              <li>vs 컴파일 언어</li>
+                              <li>메소드 = method = 동작하는 것 -> function</li>
+                              <li>객체가 어떤 행동을 하도록 정의하는 것</li>
+                            </ul>
+                            </div></div>
+
+                        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                            <ul class="list-unstyled">
+                                <li>왜 자바스크립트?</li>
+                                <li>html + css + js</li>
+                                <li>자바스크립트를 통해 할 수 있는 것들.</li>
+                                <li>https://hajimewatanabe.jp/portfolio/</li>
+                                <li>https://helloenjoy.itch.io/hellorun</li>
+                                <li>객체가 어떤 행동을 하도록 정의하는 것</li>
+                            </ul>
+                            </div></div>
+
+                        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                            <ul class="list-unstyled">
+                                <li>기본구조</li>
+                                <li>stack + webAPIs + event loop + task queue.</li>
+                            </ul>
+                            </div></div>
+                    </div>
+                    변수 명명 규칙
+                     변수 이름은 문자로 시작할 수 있다. (숫자로 시작하
+                    면 안됨.)
+                     변수 이름은 $나 _로 시작할 수 있다.
+                     변수 이름은 대소문자를 구별한다.(count와 Count는
+                    서로 다른 변수이다.)
+                     예약어는 변수명으로 사용할 수 없다.
+                    수치형(Numbers) - 정수나 실수
+                     문자열(Strings) – 문자가 연결된 것, ""나 ‘’로 표현
+                     부울형(Booleans) – true 또는 false
+                     배열(Arrays) – [ ]를 사용해서 정의
+                     객체형(object) – 객체를 나타내는 타입. {}를 사용해 정의
+                     typeof 연산자를 이용해서 JavaScript 변수의 유형을 찾을 수
+                    있음
+                     Undefined – 변수 선언은 되었으나 값이 정해지지 않은 상
+                    태
+                    + 덧셈 x = 3 + 2
+                    - 뺄셈 x = 3 – 2
+                    * 곱셈 x = 3 * 2
+                    / 나눗셈 x = 3 / 2
+                    % 나머지 x = 3 % 2
+                    ++ 증가 x++
+                    -- 감소 x--
+                    ** 지수화 x = 5 ** 2
+
+                  </article>
+                </section>
+            </div>
+        </scetion>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/object.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
