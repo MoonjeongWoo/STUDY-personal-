@@ -7,27 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="add" onclick= add()>add</button>
-    <button id="delete" onclick=del()>delete</button>
-    <button>undo</button>
     <script>
+     
+        let counter = 0;
+        for(let i =  1; i< 41; i++){
+            for(let j = 1 ; j < 26; j++){
+             let new_div = document.createElement("button");
+             document.body.appendChild(new_div);
+             let img = document.createElement("img");
+             img.style="width: 60px"
+             img.src = "/OFF.PNG";
+             new_div.appendChild(img);
+             counter++;
+             new_div.setAttribute('id',`${counter}`);
+             console.log(new_div.id);
+             new_div.addEventListener("click",function(){
+                if(img.src == "http://127.0.0.1:5500/OFF.PNG"){
+                    console.log("안녕");
+                    img.src ="/ON.PNG";
+                    alert(new_div.id)
+                }else{
+                    img.src ="/OFF.PNG";
+                    console.log("메홍")
+                }
+                console.log(img.src);
+             })
+            }
+        }
         
-        let arr1 = [1];;
-        const add = (x) => {
-        document.getElementById("add").addEventListener("click",function(){
-          arr1.push(x)
-          console.log(arr1)
-        });
-    }
-        add(5);
-
-        const del = (y) => {
-        document.getElementById("delete").addEventListener("click",function(){
-          arr1.pop(y)
-          console.log(arr1)
-        })
-    }
-        del()
     </script>
 
 </body>
