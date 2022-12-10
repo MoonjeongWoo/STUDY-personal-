@@ -25,13 +25,11 @@
     text-align: center;
     line-height: 100px;
     margin: 10px;
+    cursor: pointer;
 }
-
 .circle:hover{
-    background: aqua;
-    width : 110px;
-    height: 110px;
-    line-height: 105px;
+    font-size: 25px;
+    transition-duration: 0.2s;
 }
 
 #search{
