@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/basic.css" rel="stylesheet" />
+    <title>Parking Lot Zone</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div id="header"> <img src="Image/pkZone_logo.png" alt="logo"></div>
+    <div id="section">
+        <div id="menu">
+            <ul>
+                <li><a href="#">아마존</a></li>
+                <li><a href="#">적자생존</a></li>
+                <li><a href="#">생존</a></li>
+                <li><a href="#">사파리존</a></li>
+                <li><a href="#">오존</a></li>
+                <li><a href="#">빨래엔 피존</a></li>
+                <li><a href="#">파라존</a></li>
+            </ul>
+        </div>
+        <div id="row1" style="display: flex; justify-content: center;">
+        </div>
+        <div id="row2" style="display: flex; justify-content: center;">
+        </div>
+        <div id="row3" style="display: flex; justify-content: center;">
+        </div>
+        <div id="row4" style="display: flex; justify-content: center;">
+        </div>
+        <div id="modal" class="modal-overlay">
+            <div class="modal-window">
+                <div class="title">
+                    <h2>모달</h2>
+                </div>
+                <div class="close-area">X</div>
+                <div class="content">
+                    <p>빠라람 오늘의 저녁은 농민순대에서 내장볶음과</p>
+                    <p>막창에 소주한잔 해야지~~ ㅜㄹ룰ㄹ</p>
+                    <p>맛있겠지~~~</p>
+                    <p>우핳ㅇ항</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+//row1
+function display_image1(src, width, height, alt, id, value, onclick){
+    let btn = document.createElement("button");
+    let off = document.createElement("img");
+
+    off.src = src;
+    off.width = width;
+    off.height = height;
+    off.alt = alt;
+    off.id = id;
+    off.setAttribute("value", value);
+
+    off.setAttribute("onclick",onclick);
+    btn.appendChild(off);
+
+    let section = document.querySelector('#row1');
+    section.appendChild(btn);
+}
+ 
+for(let i = 0; i < 10; i++){
+        display_image1('image/자동차아이콘.png', 100, 100, 'NNONONONO', i+1, i+1, 'on_click(this)');
+}
+
+//row2
+function display_image2(src, width, height, alt, id, value, onclick){
+    let btn = document.createElement("button");
+    let off = document.createElement("img");
+
+    off.src = src;
+    off.width = width;
+    off.height = height;
+    off.alt = alt;
+    off.id = id;
+    off.setAttribute("value", value);
+
+    off.setAttribute("onclick",onclick);
+    btn.appendChild(off);
+
+    let section = document.querySelector('#row2');
+    section.appendChild(btn);
+}
+ 
+for(let i = 0; i < 10; i++){
+        display_image2('image/자동차아이콘.png', 100, 100, 'NNONONONO', i+11, i+11, 'on_click(this)');
+}
+
+//row3
+function display_image3(src, width, height, alt, id, value, onclick){
+    let btn = document.createElement("button");
+    let off = document.createElement("img");
+
+    off.src = src;
+    off.width = width;
+    off.height = height;
+    off.alt = alt;
+    off.id = id;
+    off.setAttribute("value", value);
+
+    off.setAttribute("onclick",onclick);
+    btn.appendChild(off);
+
+    let section = document.querySelector('#row3');
+    section.appendChild(btn);
+}
+ 
+for(let i = 0; i < 10; i++){
+        display_image3('image/자동차아이콘.png', 100, 100, 'NNONONONO', i+21, i+21, 'on_click(this)');
+}
+
+//row4
+function display_image4(src, width, height, alt, id, value, onclick){
+    let btn = document.createElement("button");
+    let off = document.createElement("img");
+
+    off.src = src;
+    off.width = width;
+    off.height = height;
+    off.alt = alt;
+    off.id = id;
+    off.setAttribute("value", value);
+
+    off.setAttribute("onclick",onclick);
+    btn.appendChild(off);
+
+    let section = document.querySelector('#row4');
+    section.appendChild(btn);
+}
+ 
+for(let i = 0; i < 10; i++){
+        display_image4('image/자동차아이콘.png', 100, 100, 'NNONONONO', i+31, i+31, 'on_click(this)');
+}
+
+
+
+
+
+
+
+//onclick 함수
+function on_click(off){
+    alert(off.id + "클릭");
+}
+
+
+
+</script>
+</html>

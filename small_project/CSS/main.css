@@ -1,0 +1,66 @@
+a{text-decoration: none; color: #404040;}
+li{ list-style: none;}
+
+#menu{
+    font-size: 10pt;
+    font-family: FontAwesome;
+    position: relative;
+    padding: 0 auto;
+    background: rgb(96, 178, 255);
+  }
+  
+  #menu ul{
+    margin: 0 auto;
+    width: 1080px;
+    overflow: hidden;
+  }
+  
+  #menu ul li{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 10px;
+    float: left;
+    width: 12%;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+  }
+
+  #menu a{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+  }
+
+  #menu ul li a{
+    background: #e05e5e;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  #menu ul li a:hover{
+    background: #aca1a1;
+    color: #fff;
+  }
+
+
+
+/*수미*/
+#row1 > button{
+  padding-left : 30px;
+}
+
+#row2 > button{
+  padding-left : 30px;
+}
+
+#row3 > button{
+  padding-left : 30px;
+}
+
+#row4 > button{
+  padding-left : 30px;
+}
