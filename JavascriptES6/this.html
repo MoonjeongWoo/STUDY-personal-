@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>
-
+        <button id="버튼">버튼</button>
     </div>
     <script>
 
@@ -68,7 +68,53 @@
         */
         var 내이름 = new 기계();
 
+        document.getElementById('버튼').addEventListener('click',function(e){
+          //  console.log(this);
+            /*
+            버튼을 누르면 태그들이 나온다(this로 태그들을 호출하는 것)
+            e.currentTarget 은 지금 이벤트가 동작하는 곳을 말한다 => 여기서의 this랑 똑같음
+            */
+
+            var 어레이 = [1,2,3];
+            어레이.forEach(function(){
+                console.log(this)
+
+                /*얘는 쌩으로 있는 콜백함수이다 
+                근데 쌩으로 잇는 콜백 함수는 그냥 함수랑 똑같다
+                그래서 객체에 저장이 window라는 글로벌 전역 객체에 저장이 되어서 
+                콘솔 찍으면 window가 나오는 것임
+                */
+
+
+            var 오브젝트3 = {
+                names : ['문','정','우'],
+                functions : function(){
+                    console.log(this)
+                    오브젝트3.names.forEach(()=>{
+                        console.log(this)
+                    })
+                }
+            }    
+            오브젝트3.functions();
+            })
+        })
+       
         
+        /*
+        오브젝트를 만들고 이렇게 함수를 만듦면 어떻게 되는지
+        this를 쓸때는 가장 가까운 함수 부터 찾는다
+        근데 지금 보면 객체 안에 함수가 선언이 되어 있다
+        근데 지금 객체의함수 기능을 보면 뭐 아무기능도 안한다.
+        그러면 저장이 되어 있는 window만 불러올뿐 아무것도 없다
+        */
+        
+        /*
+        그래서 this는 함수나 메소드를 만날 때마다 바뀔수 있어서
+        내가 원하는 this를 쓰기 힘들다
+        그래서 나온게 바로 Arrow function 화살표 함수다
+        함 바꿔봐
+        */
+
     </script>
 </body>
 </html>
