@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="버튼">벝은</button>
+    <script>
+/*첫번째 오브젝트 활용*/
+        var 사람 = {
+            name: '손흥민',
+            sayHi : () =>{
+                console.log(`안녕 나는 ${사람.name} 이야`)
+            }
+        }
+
+        사람.sayHi();
+
+
+/*두번째 활용*/
+
+        var 자료 = {
+            data : [1,2,3,4,5],
+            전부더하기 : () => {
+                더하기();
+            }    
+            }
+        var 더하기 = () => {
+            var 합 = 0;
+            자료.data.forEach((a)=>{
+              합 = 합 + a;
+            })
+            console.log(합);
+        }
+        자료.전부더하기()
+        
+
+/*setTimeout 활용하기*/
+        document.getElementById('버튼').addEventListener("click",function(){
+            setTimeout(()=>{
+                console.log(this.innerHTML)
+            }, 1000)
+        })
+
+    </script>
+</body>
+</html>
