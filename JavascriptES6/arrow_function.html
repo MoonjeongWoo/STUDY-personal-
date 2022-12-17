@@ -8,5 +8,52 @@
 </head>
 <body>
     
+<div>
+    Arrow function
+
+    <button id="버튼">버튼</button>
+</div>
+
+    <script>
+        
+        var 함수 = (a) => {
+            /*
+            Arrow function 장점
+
+            1. 입출력 만들 때 보기 쉽다(직관적으로 쓸 수 있다)
+            2. 파라미터 1개면 소괄호 생략가능
+
+            var 함수 = (a) => a + 5
+            
+            3. 코드 한줄이면 중괄호도 생략 가능
+            var 함수 = a => a + 5 
+            */
+
+
+        }
+
+      //  [1,2,3,4,5].forEach(function(a){
+       //     console.log(a)
+       // })
+
+        [1,2,3,4,5].forEach(a => console.log(a))
+
+        document.getElementById("버튼").addEventListener("click",(e) => {
+            /*this 값을 새로 만들지 않기 때문에 여기서 쓰면 window가 나옴*/
+            console.log(e.currentTarget) // 이거는 버튼 주소 찾기
+        })
+
+        var 오브젝트 = {
+            함수 : () => {
+                console.log("안녕")
+                console.log(this)
+            }
+        }
+
+        오브젝트.함수();
+
+
+
+    </script>
 </body>
 </html>
