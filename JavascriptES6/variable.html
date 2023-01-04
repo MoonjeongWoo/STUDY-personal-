@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*자바스크립트 변수*/
+
+        var 이름 = "문정우";
+        var 이름 = "김정우"; // -> 재선언
+        이름 = "노정우"; // -> 재할당
+        /*변수 만드는 이유 */
+        /* 자료 임시 저장 할려고 만든다*/
+        let 이름2 = "변수1";
+        let 나이 = 20; // -> 재선언 불가능
+        나이 = 30; //재 할당 가능
+
+        const 나이2 = "재선언 불가능";
+
+        // 변수는 선언, 할당, 범위 
+        // var = 재선언 가능, 재할당 가능 범위는 function
+        // let = 재선언 불가능, 재할당 가능 범위는 중괄호
+        // const = 재선언 불가능, 재할당 불가능 범위는 중괄호
+        /*수정 불가능한 오브젝트를 만들고 싶다*/
+        const 사람 = {이름: "Moon"}
+
+        //여기서 Object.freeze라는 이상한 문법을 쓴다
+        Object.freeze(사람);
+        사람.이름 = "Kim";
+
+        // 해보니깐 안바뀌어짐
+
+
+        /*변수의 호이스팅*/
+        // 변수를 반들때 호이스팅현상이 일어난다
+        // 자바스크립트가 선언 해석 하는 방법
+        // var 나이 = 30;
+        // 먼저 var 나이 => 나이 = 30; 이렇게 해석을 한다    
+        // 최상단에다가 해석을 먼저 하는게 호이스팅
+
+
+        console.log(안녕); //=> undefined
+
+        var 안녕 = 30;
+
+        console.log(안녕); // 30
+
+        /* 동시에 변수 여러개 만들기*/
+        
+        // var 나이, 이름, 성별;
+        
+
+        /*전역변수*/
+        // 모든곳에서 쓸 수 있는 변수
+        // window로 전역변수 만들기
+        // window.이름 = "문정우";
+
+        window.해윙 = "문정우";
+        console.log(window.해윙);// 나옵니다
+
+        // 함수 선언도 호이스팅
+
+        //연습문제
+
+        if(true){
+            let a = 1;
+            var b = 2;
+            if(true){
+                let b = 3;
+            }
+            console.log(b);
+            //뭐가 나올까 -> 답은 2 가 나옴
+        }
+
+        //그 이유는 let은 범위가 중괄호, 
+        // var은 함수 안에서만 가능
+
+
+
+
+    </script>
+</body>
+</html>
