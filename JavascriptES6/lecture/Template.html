@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var 문자 = `손흥민`;
+        //백틱 쓰는 이유 
+        /* 1. 엔터키 가능
+            2. 중간에 변수 넣기 좋음
+            3.함수 쓸 수 잇음
+        */
+
+        /*Tagged literal*/
+        var 변수 = `안녕하세요 ${문자} 입니다`
+        
+        function 해체분석기(문자들, 변수들){
+            console.log(문자들); //문자들만 모아준다
+            console.log(변수들); // 변수들만 모아준다
+        }
+
+        해체분석기`안녕하세요 ${문자} 입니다` //-> 해체분석기 
+        // 해체 기준은 중괄호를 기준으로 
+
+        
+        
+
+    </script>
+</body>
+</html>
