@@ -8,10 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-const Main = () =>{
+const Navbar = () =>{
 
     return(
         <>
@@ -35,14 +32,6 @@ const Main = () =>{
                             </Toolbar>
                         </AppBar>
                     </Paper>
-                    <Paper elevation={3}>
-                        <CssBaseline></CssBaseline>
-                        <Container maxWidth="md">
-                            <Box sx={{ bgcolor: "#eeee", hright: "auto"}}>
-                                
-                            </Box>
-                        </Container>
-                    </Paper>
                 </Grid>
             </Grid>
         </div>
@@ -51,4 +40,4 @@ const Main = () =>{
 
 
 }
-export default Main
+export default Navbar
