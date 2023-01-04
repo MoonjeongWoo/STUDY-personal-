@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="display: none; color: red;" > 모달창 0</div>
+    <div style="display: none; color: blue;"> 모달창 1</div>
+    <div style="display: none; color: green;"> 모달창 2</div>
+
+    <button>버튼0</button>
+    <button>버튼1</button>
+    <button>버튼2</button>
+    <script>
+    function 첫번째문제(){  
+     for(let i =1; i < 6; i++){
+     setTimeout(function(){console.log(i),i*1000})}
+     };
+
+    function 두번째문제(){
+        var 버튼들 = document.querySelectorAll('button');
+        var 모달창들 = document.querySelectorAll("div");
+
+        for(let i = 0; i < 3; i++){
+            버튼들[i].addEventListener("click",function(){
+                모달창들[i].style.display="block";
+                console.log(`${i}번째 버튼 부름`);
+            })
+        }
+    }
+    첫번째문제()
+    두번째문제()
+    /*두번째 문제 해석*/
+    // for문이 돌때 setTimeout때문에 이미 반복이 끝난 상태에서 실행문이 실행됨
+    // 그래서 반복문이 전부다 실행이 되고 전역변수로 남아있음
+    //때문에 for(var i = 0 ; i < 3; i++)은 이미 실행이 다 되었고
+    // i라는 변수는 3으로 저장이 되어 있음 
+    // 그래서 var i 로 선언을 해주면 i가 3인 상태로 계속해서 출력 
+    // 결국에는 let을 써줘야 함
+    
+
+    /*
+    함수();
+
+    function 함수(){
+        console.log(안녕);
+        let 안녕 =" hello!"
+    }
+    이거는 에러남
+    let,const는 이런 부분을 방지 하고 잇음
+    */
+    </script>
+</body>
+</html>
