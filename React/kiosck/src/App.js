@@ -1,9 +1,9 @@
 import './App.css';
-
+import Main from "./component/Intro"
 function App() {
   return (
-  <div>
-    
+  <div className="wrap">
+    <Main></Main>
   </div>
   );
 }
