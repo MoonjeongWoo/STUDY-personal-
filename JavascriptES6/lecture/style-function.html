@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Style-Function
+    <script>
+        function 임시함수(){
+            return 10;
+        }
+        
+        임시함수();
+        function 더하기(a, b = 임시함수()){
+            //default 파라미터 집어 넣기 가능, 수학 연산 가능,함수도 입력 가능
+            console.log(a+b);
+        }
+
+        더하기(1);
+
+        /*argument*/
+
+        function 함수(a,b,c){
+            //함수의 파라미터를 한꺼번에 다루고 싶을 때
+            //모든 파라미터들을 배열안에다가 넣은 변수 
+            //하나 하나 씩 쓸때는 spreadOpertor를 쓰자
+            console.log(...arguments);
+            for(var i = 0; i <arguments.length; i++){
+                console.log(arguments[i])
+            }
+        }
+        함수(1,2,3);
+
+    </script>
+</body>
+</html>
