@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    practice03
+
+    <script>
+    function 함수(a = 5, b =a * 2){
+        console.log(a+b);
+    }
+    함수(undefined,undefined);
+    // 값은 15가 나온당
+
+
+    function 어레이(...rest){
+        console.log(rest)
+    }
+    var newArray = 어레이(1,2,3,4,5);
+    console.log(newArray);
+
+// 나오기는 하는데 왜 newArray에서 undefined가 뜨는지 모르겟다
+    var numbers= [1,2,3,4,5,6,7,8,9,2,3,1,2,4,67]
+
+    function 최댓값(numbers){
+        let MAx = Math.max(...numbers);
+        console.log(MAx);
+    }
+    최댓값(numbers);
+
+
+    console.log(['c','b','a'].sort());
+
+    function 정렬([...a]){
+        let sorted = a.sort();
+        console.log(sorted)
+    }
+    정렬('bear');
+
+    function 글자세기([...b]){
+        let sorted2 = [...b].sort();
+        console.log(...sorted2);
+    }
+
+    글자세기('aacbbb');
+    </script>
+</body>
+</html>
