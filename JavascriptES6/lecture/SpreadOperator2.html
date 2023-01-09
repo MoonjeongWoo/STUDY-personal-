@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    SpreadOperator2
+    <script>
+        function 더하기(a,b,c){
+            console.log(a+b+c);
+        }
+
+        var 어레이 = [10,20,30]
+
+        더하기(어레이[0],어레이[1],어레이[2]);//-> 무식한 방법
+        더하기.apply(undefined, 어레이);//->옛날 방법
+        더하기(...어레이);// 요즘 방법
+
+        //apply, call 함수
+        /*apply*/
+
+    var person = {
+        인사 : function(){
+            console.log(this.name+"안냥")
+        }
+    }
+    person.인사();
+
+    var person2 = {
+         name: 'kim'
+    }
+    person.인사.apply(person2); //person 함수를 person2에다가 적용을 시키는 것
+    /*call*/
+
+    //파라미터를 집어 넣을때 call은 그냥 데이터로, apply는 array로 집어넣기 가능
+    
+
+
+    </script>
+</body>
+</html>
