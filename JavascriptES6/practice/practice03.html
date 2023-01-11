@@ -38,13 +38,29 @@
 
     function 정렬([...a]){
         let sorted = a.sort();
+        //글자에다가 sort 함수 먹이기는 불가능
+        // 그래서 배열로 만들어 주고 정렬을 시킨다
+        // join 이라는 함수는 배열의 문자들을 붙여주고 대괄호 없애준다
         console.log(sorted)
     }
     정렬('bear');
 
     function 글자세기([...b]){
-        let sorted2 = [...b].sort();
-        console.log(...sorted2);
+        //코드 짜는 법
+        //한글로 짜보고
+        // 자바스크립트 문법 적용 해보자
+        
+        var 결과 = {};
+        b.forEach(function(a){
+            //만약 결과에 a가 있으면 +1 없으면 a 를 1로 집어넣으세요
+            if(결과[a] > 0){
+                결과[a] = 결과[a] +1;
+
+            }else{
+                결과[a] =1;
+            }
+        })
+console.log(결과);
     }
 
     글자세기('aacbbb');
