@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    practice04
+
+    <script>
+        /*첫번째 문제*/
+
+        function 기계(이름,나이){
+            this.name = 이름;
+            this.age = 나이;
+            this.sayHi = function(){
+                console.log(`안녕 내이름은 ${this.name}이야 나이는 ${this.age}이고`)
+            }
+        }
+
+        var 학생1 = new 기계('Kim', 20);
+        var 학생2 = new 기계('Park', 21);
+        var 학생3 = new 기계('lee', 30);
+        
+        console.log(학생1)
+
+        /*두번째 문제*/
+        function Parent(){
+            this.name = 'Kim'
+        }
+
+        var a = new Parent();
+
+        a.__proto__.name = 'Park';
+        console.log(a.name);
+
+        // kim이 나오는 이유는 
+        //  var a= new Parent 까지는 name이라는 키값은 kim이라는 value를 가지게 된다
+        // a._proto__.name 이거는 부모의 prototype에 name을 추가 해서 이 뜻임
+        // 그럼 이제 출력 할때는 내가 직접 가지고 잇는 name: Kim을 출력한다
+
+    </script>
+</body>
+</html>

@@ -61,6 +61,16 @@
         <br>
         보통은 상속 할 수 있는 함수들은 prototype으로 만듬
       </div>
+      <div>
+        부모가 궁금하면
+        <br>
+        인스턴스._proto_ 라고 쳐보자
+        <br>
+      </div>
+      <div>
+
+
+      </div>
     <script>
         function 기계(이름, 나이){
             this.name = 이름;
@@ -93,6 +103,11 @@
         여기서 Array 의 prototype에 내장함수가 포함되어 있다
 
         */
+
+        var 부모 = { name: "엄마"}
+        var 자식 = {}
+
+        자식.__proto__ = 부모;
 
     </script>
 </body>
