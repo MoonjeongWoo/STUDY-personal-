@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Prototype(유전자)
+        <br>
+     function 기계(){
+        this.코드
+        this.코드
+        this.코드
+     }
+     
+     <br>
+     라고 되어 있으면 생성자 임 
+     해서 인스턴스 생성은 
+     <br>
+      var 변수 = new 기계()
+      이렇게 생성을 한다
+      <br>
+      근데 생성 하는 정확한 과정은
+      new 라는 키워드는 오브젝트나 어레이를 만들때 사용 되는데 
+      <br>
+      var arr =[1,2,3]
+      이라고 명령어를 만들면 
+      var arr = new Array(1,2,3)
+      이라고 컴퓨터는 인식을 한다
+      여기서 Array라는 생성자에 없는 기능들, 메소드 들을 
+      <br>
+      추가 하거나 원하는 값을 찾을 때 prototype을 이용한다
+      자식에게는 없는 속성을 부모에게서 찾는다
+      정확한 순서는 
+      <br>
+      <br>
+      1. 생성자에 기능이나 속성이 있는지 찾아보고
+      <br>
+      2. 없으면 부모에게 가서 찾는다
+      <br>
+      3. 부모에게도 없으면 상위 노드나 부모의 부모에게 찾는다
+      <br>
+      4. 찾으면 그 노드 protype으로 속성이 선언 되어 있거나, 아니면 메소드로 되어 있음
+      <br>
+      좀더 심화 과정으로 
+      <br>
+      Array 나 Object에는 내장 함수들이 포함 되어 있는데
+      prototype으로 확인이 가능하다
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1>Prototype 이랑 Consturctor 비교</h1>
+      <div>
+        자식들에게 직접 값들을 가지고 싶게 하면 Consturctor로 상속시키면 됨
+        <br>
+        부모만 가지고 있고 그걸 참조해서 쓰게 하고 싶으면 protytpe으로 하면 됨
+        <br>
+        보통은 상속 할 수 있는 함수들은 prototype으로 만듬
+      </div>
+    <script>
+        function 기계(이름, 나이){
+            this.name = 이름;
+            this.age = 나이;
+            this.sayHi = function(){
+                console.log(`안녕하세요 ${this.name} 입니다`)
+            }
+            //생성자 만들면 프로토타입이라는 이상한 속성이 생긴다
+        }
+
+        기계.prototype.gender = '남자'; //이 오브젝트에 젠더라는 속성 만듬
+        // 부모 유전자에다가 속성 넣은거임
+        
+
+        //프로토타입은 유전자 
+        // 순서 
+        // 1. 일단 직접 오브젝트 속성 조사 
+        // 2. 없으면 부모에게서 속성 조사 계속 상위 노드에게 조사
+
+        var 학생1 = new 기계('문정우' , 40);
+        //toString => 어레이를 문자열로 바꿔줌
+
+        //내장 함수 동작 원리 => 
+        /*내장 함수 동작 원리
+        
+        어레이가 만들어지는 과정 
+        사람 => var arr = [1,2,3]
+        컴퓨터 => var arr => new Array(1,2,3)  
+        
+        여기서 Array 의 prototype에 내장함수가 포함되어 있다
+
+        */
+
+    </script>
+</body>
+</html>

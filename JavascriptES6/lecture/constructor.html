@@ -20,7 +20,7 @@
         
         //constructor 만드는 방법
 
-        function 기계(구멍){ //관례적으로 consturctor는 함수앞에 대문자 씀
+        function 기계(구멍){ //관례적으로 consturctor는 함수앞에 대문자 씀 얘는 부모
             this.name = 구멍; //새로 생성되는 오브젝트 에 name이라는 속성
             this.age = 15; // age 속성
             this.sayHi = () => {
@@ -31,7 +31,7 @@
         new 기계(); // 오브젝트 생성
         
         var 학생1 = new 기계('문정우'); // 새로운 학생1이라는 오브젝트 생성
-        var 학생2 = new 기계('윤동희');
+        var 학생2 = new 기계('윤동희'); // 얘들은 자식임
 
         학생1.sayHi();
         학생2.sayHi();
