@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Reference data type
+
+    <script>
+        var 변수 = 'dddd' // -> primitive data type은 이 값 그대로 변수에 저장
+
+        var 어레이 = [1,2,3];// array나 object는 변수에 값이 저장이 안됨 reference
+
+        var 오브젝트 = {name : 'Kim'}; // name : Kim이라는 오브젝트가 이쪽에 있다
+
+       /*Reference data type*/
+        var 이름1 = { name : "Kim"} ;
+        var 이름2 = 이름1;
+        
+        console.log(이름1.name); //kim 나옴
+        console.log(이름2.name)
+        
+        
+        이름1.name = "박";
+        
+        
+        console.log(이름2.name); //박 나옴 
+        console.log(이름1.name);
+        
+
+        // 이름1 == 이름2 => 결과 false 
+        // why 서로 가리키는 주소가 다르기 때문
+
+        function 변경(obj){
+            obj.name = "park";
+        }
+
+        변경(이름1)
+        
+        // 파라미터는 변수생성&할당과 똑같다
+    </script>
+</body>
+</html>
