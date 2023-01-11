@@ -9,7 +9,46 @@
 <body>
     생성자
     Constructor
+
+    오브젝트 여러개 만들고 싶을 때 사용한다
+    별거 다 넣을 수 있다.
     <script>
+        //var 학생1 = {name : "Kim" , age : 20}
+        //var 학생2 = {}
+        // 이러면 오브젝트 만들때 시간이 너무 걸림
+        //그래서 생성장 consturctor 사용한다
+        
+        //constructor 만드는 방법
+
+        function 기계(구멍){ //관례적으로 consturctor는 함수앞에 대문자 씀
+            this.name = 구멍; //새로 생성되는 오브젝트 에 name이라는 속성
+            this.age = 15; // age 속성
+            this.sayHi = () => {
+                console.log(`${this.name} 입니다, 안녕하세요`);
+            }
+        }
+        //인스턴스 => 새로 생성되는 오브젝트
+        new 기계(); // 오브젝트 생성
+        
+        var 학생1 = new 기계('문정우'); // 새로운 학생1이라는 오브젝트 생성
+        var 학생2 = new 기계('윤동희');
+
+        학생1.sayHi();
+        학생2.sayHi();
+
+        function Shop(a,b){
+            this.name = a
+            this. price = b
+            this.부가세 =() =>{
+                console.log(`${this.name} 은 ${this.price * 0.1}의 부가세가 붙습니다`)
+            }
+        }
+
+        var product1 = new Shop('shirts' , 50000);
+        var product2 = new Shop('pants', 60000);
+
+        
+        product1.부가세();
         
     </script>
 </body>
