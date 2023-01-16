@@ -11,7 +11,35 @@
     extends/super
     
     <script>
+        class 할아버지 {
+            //유사한 class 만들려면 extends로 복사
+            //extends 쓰는 이유 -> 복사/상속값 많으면 개 힘듬
+            // extends로 class 복사아
+            constructor(name){
+                this.성 = '윤';
+                this.이름 = name;
+            }
+        }
         
+        class 아버지 extends 할아버지 {
+            constructor(name,age){
+                super(name) // 파라미터 다 써야 함
+                /*super를 쓰면 부모 consturctor를 쓰는거랑 똑같음*/
+                this.나이 = age;  //이대로 this 쓰면 못씀; super 써야 함
+            }
+        }
+        class 자식 extends 아버지 {
+            constructor(name,age){
+                super(name,age)
+                this.취미 = '당구';
+                this.hello = function(){
+                    console.log("안녕");
+                }
+            }
+        }
+        var 할아버지1 = new 할아버지('동희');
+        var 아버지1 = new 아버지('석렬')
+        var 자식1 = new 자식('미래',20);
     </script>
 </body>
 </html>
